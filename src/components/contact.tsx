@@ -22,17 +22,20 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      await emailjs.send("service_dp4ba72", "template_ivmy9os", {
+      await emailjs.send("service_1mmyrpk", "template_7j1aj1i", {
         from_name: form.name,
         from_email: form.email,
         budget: form.budget,
         message: form.message,
-      }, "mkG8cTQ0vwWahC6JO");
+      }, { publicKey: "BUS00ZVP7fVGfsSdb" });
       setSubmitted(true);
       setForm({ name: "", email: "", budget: "", message: "" });
-    } catch (err) {
-      console.error(err);
-      alert("Something went wrong. Please try again.");
+    } catch (err: unknown) {
+      console.error("EmailJS error:", err);
+      const msg = err && typeof err === "object" && "text" in err
+        ? (err as { text: string }).text
+        : String(err);
+      alert("EmailJS error: " + msg);
     } finally {
       setIsSubmitting(false);
     }

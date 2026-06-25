@@ -30,10 +30,10 @@ export default function ContactPage() {
 
     try {
       await emailjs.send(
-        "service_dp4ba72",
-        "template_ivmy9os",
+        "service_1mmyrpk",
+        "template_7j1aj1i",
         templateParams,
-        "mkG8cTQ0vwWahC6JO"
+        { publicKey: "BUS00ZVP7fVGfsSdb" }
       );
       setSubmitted(true);
     } catch (error) {
