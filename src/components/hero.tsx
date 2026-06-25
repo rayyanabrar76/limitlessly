@@ -1,33 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 
-const SLIDES = [
-  {
-    url: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=900&h=1100&fit=crop&crop=center",
-    label: "Abstract Composition",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=900&h=1100&fit=crop&crop=center",
-    label: "Digital Grid",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=900&h=1100&fit=crop&crop=center",
-    label: "Creative Form",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1557672172-298e090bd0f1?w=900&h=1100&fit=crop&crop=center",
-    label: "Fluid Vision",
-  },
-];
+const HeroScene = dynamic(() => import("@/components/hero-scene"), {
+  ssr: false,
+  loading: () => null,
+});
 
 export default function Hero() {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const id = setInterval(() => setCurrent(c => (c + 1) % SLIDES.length), 4000);
-    return () => clearInterval(id);
-  }, []);
 
   return (
     <section className="min-h-screen bg-neutral-950 relative overflow-hidden grid grid-cols-1 lg:grid-cols-2">
@@ -111,57 +91,23 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ── RIGHT — Image Slider ── */}
-      <div className="relative hidden lg:block overflow-hidden">
-
-        {/* Slides */}
-        {SLIDES.map((slide, i) => (
-          <div
-            key={i}
-            className="absolute inset-0 transition-opacity duration-1000 ease-in-out"
-            style={{ opacity: i === current ? 1 : 0 }}
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={slide.url}
-              alt={slide.label}
-              className="w-full h-full object-cover"
-            />
-            {/* Overlays */}
-            <div className="absolute inset-0 bg-gradient-to-r from-neutral-950 via-neutral-950/20 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-transparent to-neutral-950/30" />
-          </div>
-        ))}
-
-        {/* Slide label + dot controls */}
-        <div className="absolute bottom-10 left-8 right-8 z-20 flex items-center justify-between">
-          <p className="text-white/40 text-xs font-medium tracking-widest uppercase">
-            {SLIDES[current].label}
-          </p>
-          <div className="flex gap-2 items-center">
-            {SLIDES.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                aria-label={`Slide ${i + 1}`}
-                className={`rounded-full transition-all duration-400 ${
-                  i === current
-                    ? "w-6 h-1.5 bg-white"
-                    : "w-1.5 h-1.5 bg-white/30 hover:bg-white/50"
-                }`}
-              />
-            ))}
-          </div>
+      {/* ── RIGHT — 3D Scene ── */}
+      <div className="relative hidden lg:block overflow-hidden bg-neutral-950">
+        {/* Three.js canvas fills the panel */}
+        <div className="absolute inset-0">
+          <HeroScene />
         </div>
 
-        {/* Slide counter */}
-        <div className="absolute top-8 right-8 z-20 text-white/25 text-xs font-medium tabular-nums">
-          {String(current + 1).padStart(2, "0")} / {String(SLIDES.length).padStart(2, "0")}
-        </div>
+        {/* Left-edge blend into text panel */}
+        <div className="absolute inset-y-0 left-0 w-40 bg-linear-to-r from-neutral-950 to-transparent pointer-events-none z-10" />
+        {/* Top blend */}
+        <div className="absolute inset-x-0 top-0 h-28 bg-linear-to-b from-neutral-950/60 to-transparent pointer-events-none z-10" />
+        {/* Bottom blend */}
+        <div className="absolute inset-x-0 bottom-0 h-28 bg-linear-to-t from-neutral-950/60 to-transparent pointer-events-none z-10" />
       </div>
 
       {/* Mobile bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-neutral-950 to-transparent pointer-events-none z-10 lg:hidden" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-neutral-950 to-transparent pointer-events-none z-10 lg:hidden" />
 
     </section>
   );
