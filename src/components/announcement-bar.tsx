@@ -14,7 +14,7 @@ export default function AnnouncementBar() {
   const items = Array(6).fill(TEXT);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-[70] h-9 flex items-center overflow-hidden bg-neutral-950 border-b border-white/6">
+    <div className="fixed top-0 left-0 right-0 z-70 h-9 flex items-center overflow-hidden bg-neutral-950 border-b border-white/6">
       <div className="flex-1 overflow-hidden">
         <div className="flex animate-marquee-bar whitespace-nowrap">
           {items.map((t, i) => (

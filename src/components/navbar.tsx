@@ -54,7 +54,7 @@ export default function Navbar() {
   return (
     <>
       {/* Floating Pill Nav */}
-      <nav className="fixed top-[46px] left-0 right-0 z-50 px-4 flex justify-center">
+      <nav className="fixed top-11.5 left-0 right-0 z-50 px-4 flex justify-center">
         <div className="w-full max-w-4xl bg-white border border-neutral-200 rounded-full shadow-md shadow-black/5 px-4 py-2 flex items-center justify-between">
 
           {/* Logo */}
