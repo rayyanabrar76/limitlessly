@@ -33,7 +33,7 @@ export default function Hero() {
     <section className="min-h-screen bg-neutral-950 relative overflow-hidden grid grid-cols-1 lg:grid-cols-2">
 
       {/* ── LEFT — Text ── */}
-      <div className="relative flex flex-col justify-center px-8 md:px-14 lg:px-16 pt-40 pb-16 lg:py-24 z-10">
+      <div className="relative flex flex-col px-8 md:px-14 lg:px-16 pt-35 pb-16 lg:pt-37.5 lg:pb-20 z-10">
 
         {/* Dot grid */}
         <div

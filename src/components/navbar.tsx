@@ -65,7 +65,7 @@ export default function Navbar() {
               width={360}
               height={120}
               priority
-              className="h-6 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+              className="h-9 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
               quality={100}
             />
           </Link>
