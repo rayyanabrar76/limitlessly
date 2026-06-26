@@ -13,6 +13,7 @@ const navItems = [
       { label: "E-Commerce Store", desc: "Custom online stores built to sell", href: "/services" },
       { label: "Business Website", desc: "Professional sites for your brand", href: "/services" },
       { label: "Full Package", desc: "Complete online presence", href: "/services" },
+      { label: "Game Development", desc: "PC, mobile & web games from scratch", href: "/services" },
       { label: "Pricing", desc: "Transparent pricing, no hidden fees", href: "/services" },
     ],
   },
