@@ -21,8 +21,9 @@ const navItems = [
     label: "Portfolio",
     href: "/portfolio",
     dropdown: [
-      { label: "E-Commerce Projects", desc: "Online stores we have built", href: "/portfolio" },
-      { label: "Business Websites", desc: "Landing pages and business sites", href: "/portfolio" },
+      { label: "E-Commerce Projects", desc: "Online stores we have built", href: "/portfolio/ecommerce" },
+      { label: "Business Websites", desc: "Landing pages and business sites", href: "/portfolio/business-websites" },
+      { label: "Game Development", desc: "PC, mobile & co-op games", href: "/portfolio/game-development" },
       { label: "All Work", desc: "Browse everything we have built", href: "/portfolio" },
     ],
   },
