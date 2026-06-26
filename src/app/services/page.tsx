@@ -58,6 +58,24 @@ const services = [
     ],
     highlight: false,
   },
+  {
+    title: "Game Development",
+    price: "From $999",
+    delivery: "21-60 days",
+    description:
+      "Custom game development for PC, mobile, and web. From concept to launch — mechanics, UI, art integration, and publishing support. We build games players actually want to play.",
+    features: [
+      "PC, mobile & web platforms",
+      "Unity / Unreal Engine",
+      "Game design & mechanics",
+      "UI/UX for games",
+      "Art & asset integration",
+      "QA & playtesting",
+      "Publishing support",
+      "Post-launch maintenance",
+    ],
+    highlight: false,
+  },
 ];
 
 const process = [
@@ -109,7 +127,7 @@ export default function ServicesPage() {
           </div>
 
           {/* Pricing Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
             {services.map((service) => (
               <div
                 key={service.title}
