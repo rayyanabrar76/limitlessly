@@ -1,39 +1,115 @@
 export const metadata = {
   title: "Game Development — Limitless",
-  description: "From concept to launch — we build games players actually want to play. PC, mobile, and web.",
+  description: "Custom game development for PC, mobile, and web. From concept to launch — mechanics, art, UI, QA, and publishing support. We build games players actually want to play.",
 };
 
+const platforms = [
+  {
+    title: "PC Games",
+    desc: "High-fidelity desktop games built for Steam, Epic, or direct distribution. From indie titles to complex simulations.",
+    img: "https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=800&q=85&fit=crop",
+  },
+  {
+    title: "Mobile Games",
+    desc: "Optimised iOS and Android games. Casual, hyper-casual, RPG, or puzzle — built to retain and monetise.",
+    img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=85&fit=crop",
+  },
+  {
+    title: "Web & Browser Games",
+    desc: "Lightweight, shareable games that run in any browser. Perfect for marketing campaigns, MVPs, and viral products.",
+    img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=85&fit=crop",
+  },
+];
+
 const features = [
-  "PC & Mobile Platforms",
-  "Unity / Unreal Engine",
-  "Game Design & Mechanics",
-  "UI/UX for Games",
-  "Art & Asset Integration",
-  "QA & Playtesting",
-  "Publishing Support",
-  "Post-Launch Maintenance",
+  { icon: "🎮", title: "Game Design", desc: "Core loop, mechanics, level design, economy — every system designed to keep players hooked." },
+  { icon: "⚙️", title: "Unity & Unreal", desc: "We work with industry-standard engines so your game is built on a foundation that scales." },
+  { icon: "🎨", title: "Art & Asset Integration", desc: "2D sprites, 3D models, animations — we integrate and optimise all your visual assets." },
+  { icon: "📱", title: "Cross-Platform", desc: "One game, many platforms. PC, Mac, iOS, Android, and web — we handle the porting." },
+  { icon: "🧪", title: "QA & Playtesting", desc: "Rigorous testing across devices and player types. We find the bugs before your players do." },
+  { icon: "🚀", title: "Publishing Support", desc: "Steam, App Store, Google Play — we guide you through every submission and approval process." },
+  { icon: "💰", title: "Monetisation", desc: "In-app purchases, ads, subscriptions, DLC — we build the systems that make your game profitable." },
+  { icon: "🔧", title: "Post-Launch Support", desc: "Updates, patches, new content — we stay with your game long after it launches." },
+];
+
+const techStack = [
+  { name: "Unity", category: "Engine" },
+  { name: "Unreal Engine", category: "Engine" },
+  { name: "C#", category: "Language" },
+  { name: "C++", category: "Language" },
+  { name: "Blender", category: "3D Art" },
+  { name: "Photoshop", category: "2D Art" },
+  { name: "Steam SDK", category: "Publishing" },
+  { name: "Firebase", category: "Backend" },
+  { name: "PlayFab", category: "Backend" },
+  { name: "Spine", category: "Animation" },
+  { name: "FMOD", category: "Audio" },
+  { name: "Git / Plastic SCM", category: "Version Control" },
 ];
 
 const steps = [
   {
-    step: "01",
-    title: "Discovery",
-    description: "We dig into your game concept, target audience, platforms, and vision to map out the full scope of the project.",
+    num: "01",
+    title: "Discovery & Concept",
+    desc: "We start with a deep dive into your vision — genre, target audience, platforms, monetisation, and scope. You leave this phase with a full GDD (Game Design Document) and project roadmap.",
+    img: "https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=800&q=85&fit=crop",
   },
   {
-    step: "02",
-    title: "Design & Build",
-    description: "We prototype, design the core mechanics, integrate assets, and build the full game with regular milestone updates.",
+    num: "02",
+    title: "Prototype",
+    desc: "Before we go full production, we build a playable prototype. This lets us validate the core loop, feel, and mechanics before investing in full art and content production.",
+    img: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=800&q=85&fit=crop",
   },
   {
-    step: "03",
-    title: "Review",
-    description: "We run QA and playtesting sessions, gather feedback, and refine the game until it plays exactly the way it should.",
+    num: "03",
+    title: "Production",
+    desc: "Full game development with weekly builds and milestone check-ins. Art, code, sound, UI — everything comes together in this phase. You stay informed every step of the way.",
+    img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=85&fit=crop",
   },
   {
-    step: "04",
+    num: "04",
+    title: "QA & Polish",
+    desc: "We run exhaustive QA across target devices and platforms, fix bugs, tune difficulty, and polish every frame. Your game needs to feel great — not just function.",
+    img: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=85&fit=crop",
+  },
+  {
+    num: "05",
     title: "Launch",
-    description: "We handle publishing support and get your game live. Post-launch maintenance keeps it running smoothly.",
+    desc: "We handle publishing submissions, store page setup, and launch-day support. Your game goes live the right way — with metadata, screenshots, trailers, and reviews strategy.",
+    img: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=800&q=85&fit=crop",
+  },
+  {
+    num: "06",
+    title: "Growth & Updates",
+    desc: "Post-launch we support patches, new content drops, live events, and community feedback loops. The best games keep evolving — so do we.",
+    img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=85&fit=crop",
+  },
+];
+
+const faqs = [
+  {
+    q: "Do I need to have a game design document ready?",
+    a: "Not at all. Many of our clients come with just an idea. We help you develop the concept into a full GDD during the discovery phase."
+  },
+  {
+    q: "Which engine do you use — Unity or Unreal?",
+    a: "We work with both. Unity is great for mobile and indie PC titles. Unreal is ideal for high-fidelity PC and console-quality games. We'll recommend the right one based on your game type and budget."
+  },
+  {
+    q: "Can you work with my existing team or assets?",
+    a: "Yes. We're flexible — we can take on the full pipeline or slot in as an extra development team alongside your existing crew."
+  },
+  {
+    q: "What platforms can you publish to?",
+    a: "Steam (PC/Mac), Google Play, Apple App Store, and web platforms. We handle the full submission process for each."
+  },
+  {
+    q: "How long does a game take to build?",
+    a: "Simple mobile or web games: 3–8 weeks. Mid-scope indie PC titles: 2–6 months. Larger productions vary by scope. We'll give you a precise timeline after the discovery phase."
+  },
+  {
+    q: "Do you handle monetisation and in-app purchases?",
+    a: "Yes. We implement and test IAP systems, ad networks (AdMob, Unity Ads), subscriptions, and DLC pipelines depending on your monetisation strategy."
   },
 ];
 
@@ -41,160 +117,290 @@ export default function GameDevelopmentPage() {
   return (
     <main className="bg-white">
 
-      <section className="relative w-full overflow-hidden" style={{ minHeight: "560px" }}>
+      {/* ── Hero ── */}
+      <section className="relative w-full overflow-hidden" style={{ minHeight: "100vh" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1400&q=85&fit=crop"
+          src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1800&q=90&fit=crop"
           alt="Game Development"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/65" />
-        <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 pt-32 pb-24" style={{ minHeight: "560px" }}>
-          <div className="inline-flex items-center gap-2 mb-5">
-            <span className="w-6 h-px bg-white/40"></span>
-            <p className="text-xs text-white/60 uppercase tracking-widest font-medium">Service</p>
-            <span className="w-6 h-px bg-white/40"></span>
-          </div>
-          <h1
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 max-w-3xl leading-tight"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
-            Game Development
-          </h1>
-          <p className="text-lg md:text-xl text-white/70 max-w-xl leading-relaxed">
-            From concept to launch — we build games players actually want to play.
-          </p>
-        </div>
-      </section>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
 
-      <section className="py-24 px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 mb-6">
-            <span className="w-6 h-px bg-neutral-400"></span>
-            <p className="text-xs text-neutral-400 uppercase tracking-widest font-medium">What You Get</p>
-          </div>
-          <h2
-            className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
-            Games built to be played, not just shipped
-          </h2>
-          <p className="text-lg text-neutral-500 leading-relaxed max-w-2xl">
-            Custom game development for PC, mobile, and web — covering the full pipeline from design to publishing. We handle game mechanics, UI/UX, art and asset integration, QA, and playtesting so you end up with a game that actually engages players.
-          </p>
-          <p className="text-lg text-neutral-500 leading-relaxed max-w-2xl mt-4">
-            Whether you have a fully fleshed-out concept or just a spark of an idea, we work with you every step of the way. We use industry-standard engines like Unity and Unreal Engine and support publishing to major platforms. Post-launch, we stay involved to keep things running smoothly.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 px-6 bg-neutral-50 border-y border-neutral-200">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-2 mb-5">
-              <span className="w-6 h-px bg-neutral-400"></span>
-              <p className="text-xs text-neutral-400 uppercase tracking-widest font-medium">Everything Included</p>
-              <span className="w-6 h-px bg-neutral-400"></span>
+        <div className="relative z-10 flex flex-col justify-end px-6 md:px-16 pb-24 pt-40" style={{ minHeight: "100vh" }}>
+          <div className="max-w-7xl mx-auto w-full">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-2 h-2 rounded-full bg-emerald-400" />
+              <p className="text-xs text-emerald-400 uppercase tracking-[0.25em] font-semibold">Available Now</p>
             </div>
-            <h2
-              className="text-3xl md:text-4xl font-bold text-neutral-900"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
-              Features
-            </h2>
+            <h1 className="text-[clamp(56px,10vw,130px)] font-black text-white leading-[0.88] tracking-tighter mb-8 max-w-5xl">
+              Game<br /><span className="text-white/25">Develop</span>ment.
+            </h1>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+              <p className="text-lg md:text-xl text-white/60 max-w-lg leading-relaxed">
+                From concept to launch — PC, mobile, and web games built with Unity and Unreal Engine. We handle the full pipeline so you can focus on your vision.
+              </p>
+              <div className="flex gap-4 shrink-0">
+                <a
+                  href="/#contact"
+                  className="flex items-center gap-3 bg-white text-neutral-900 font-semibold text-sm pl-6 pr-3 py-3 rounded-full hover:bg-neutral-100 transition-all"
+                >
+                  Start a Project
+                  <span className="w-7 h-7 bg-neutral-900 rounded-full flex items-center justify-center text-white text-xs">↗</span>
+                </a>
+                <a
+                  href="#process"
+                  className="flex items-center gap-3 border border-white/20 text-white font-semibold text-sm px-6 py-3 rounded-full hover:border-white/50 hover:bg-white/5 transition-all"
+                >
+                  See Our Process
+                </a>
+              </div>
+            </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            {features.map((feature) => (
-              <div
-                key={feature}
-                className="bg-white border border-neutral-200 rounded-2xl px-5 py-4 flex items-start gap-3 hover:border-neutral-300 hover:shadow-sm transition-all"
-              >
-                <span className="text-neutral-900 font-bold mt-0.5 shrink-0">✓</span>
-                <span className="text-sm text-neutral-700 font-medium">{feature}</span>
+        </div>
+
+        {/* Stats bar */}
+        <div className="absolute bottom-0 left-0 right-0 border-t border-white/10 bg-black/40 backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto px-6 md:px-16 py-5 flex flex-wrap gap-8 md:gap-16">
+            {[["PC, Mobile & Web", "Platforms"], ["Unity & Unreal", "Engines"], ["21–60 Days", "Delivery"], ["From $999", "Starting Price"]].map(([val, label]) => (
+              <div key={label}>
+                <p className="text-white font-black text-lg leading-none">{val}</p>
+                <p className="text-white/40 text-xs uppercase tracking-widest mt-1">{label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-24 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-2 mb-5">
-              <span className="w-6 h-px bg-neutral-400"></span>
-              <p className="text-xs text-neutral-400 uppercase tracking-widest font-medium">How It Works</p>
-              <span className="w-6 h-px bg-neutral-400"></span>
-            </div>
-            <h2
-              className="text-3xl md:text-4xl font-bold text-neutral-900"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
-              Our Process
+      {/* ── Intro split ── */}
+      <section className="py-28 px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <p className="text-xs text-neutral-400 uppercase tracking-[0.2em] font-medium mb-5">What We Do</p>
+            <h2 className="text-4xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight mb-6">
+              We don't just build games.<br />We build experiences.
             </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {steps.map((item) => (
-              <div
-                key={item.step}
-                className="bg-neutral-50 border border-neutral-200 rounded-2xl p-6 hover:border-neutral-300 hover:shadow-sm transition-all"
-              >
-                <p className="text-4xl font-bold text-neutral-200 mb-4">{item.step}</p>
-                <h3 className="font-bold text-neutral-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-neutral-500 leading-relaxed">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 px-6 bg-neutral-50 border-y border-neutral-200">
-        <div className="max-w-2xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 mb-5">
-            <span className="w-6 h-px bg-neutral-400"></span>
-            <p className="text-xs text-neutral-400 uppercase tracking-widest font-medium">Pricing</p>
-            <span className="w-6 h-px bg-neutral-400"></span>
-          </div>
-          <h2
-            className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
-            Simple, Transparent Pricing
-          </h2>
-          <p className="text-neutral-500 mb-10">No hidden fees. No surprises. Just great work delivered on schedule.</p>
-          <div className="bg-white border border-neutral-200 rounded-2xl p-10 shadow-sm">
-            <p className="text-xs text-neutral-400 uppercase tracking-widest mb-3 font-medium">21–60 days delivery</p>
-            <p
-              className="text-6xl font-bold text-neutral-900 mb-2"
-              style={{ fontFamily: "'Playfair Display', serif" }}
-            >
-              From $999
+            <p className="text-neutral-500 text-lg leading-relaxed mb-5">
+              Most studios hand you a finished product and disappear. We take a different approach — working as your creative and technical partner from the first sketch to the last patch.
             </p>
-            <p className="text-neutral-500 mb-8">Full-pipeline game development from concept to publishing.</p>
+            <p className="text-neutral-500 text-lg leading-relaxed mb-8">
+              Whether you have a fully fleshed-out design document or just a spark of an idea, we help you develop it into a game that players actually want to keep coming back to. We use Unity and Unreal Engine, support all major platforms, and handle everything from mechanics to monetisation.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {["Unity", "Unreal Engine", "PC", "iOS", "Android", "Web", "Steam", "App Store"].map(tag => (
+                <span key={tag} className="text-xs border border-neutral-200 text-neutral-500 px-3 py-1.5 rounded-full">{tag}</span>
+              ))}
+            </div>
+          </div>
+          <div className="relative rounded-3xl overflow-hidden" style={{ height: "500px" }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=900&q=90&fit=crop"
+              alt="PC Gaming Setup"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+            <div className="absolute bottom-6 left-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-5 py-4">
+              <p className="text-white font-bold text-sm">Full-pipeline development</p>
+              <p className="text-white/60 text-xs mt-0.5">Concept → Prototype → Production → Launch</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Platforms ── */}
+      <section className="py-24 px-6 bg-neutral-950">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+            <div>
+              <p className="text-xs text-neutral-500 uppercase tracking-[0.2em] font-medium mb-3">Platforms</p>
+              <h2 className="text-4xl md:text-5xl font-black text-white leading-tight tracking-tight">
+                Where your game lives
+              </h2>
+            </div>
+            <p className="text-neutral-500 max-w-sm text-sm leading-relaxed">
+              We build for the platform that fits your game — and can port across all of them.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {platforms.map((p) => (
+              <div key={p.title} className="relative rounded-2xl overflow-hidden group" style={{ height: "360px" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-7">
+                  <h3 className="text-2xl font-black text-white mb-2">{p.title}</h3>
+                  <p className="text-white/60 text-sm leading-relaxed">{p.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Features ── */}
+      <section className="py-28 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-xs text-neutral-400 uppercase tracking-[0.2em] font-medium mb-4">Everything Included</p>
+            <h2 className="text-4xl md:text-5xl font-black text-neutral-900 tracking-tight">What's in the package</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {features.map((f) => (
+              <div key={f.title} className="border border-neutral-100 rounded-2xl p-7 hover:border-neutral-300 hover:shadow-md transition-all duration-200 group">
+                <div className="text-3xl mb-5">{f.icon}</div>
+                <h3 className="font-bold text-neutral-900 text-base mb-2">{f.title}</h3>
+                <p className="text-neutral-500 text-sm leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Tech Stack ── */}
+      <section className="py-20 px-6 bg-neutral-50 border-y border-neutral-100">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12">
+            <div>
+              <p className="text-xs text-neutral-400 uppercase tracking-[0.2em] font-medium mb-3">Tech Stack</p>
+              <h2 className="text-3xl md:text-4xl font-black text-neutral-900 tracking-tight">Industry-standard tools</h2>
+            </div>
+            <p className="text-neutral-500 text-sm max-w-sm leading-relaxed">No experimental stacks. We use the same tools the world's best game studios rely on.</p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            {techStack.map((t) => (
+              <div key={t.name} className="flex items-center gap-2.5 bg-white border border-neutral-200 rounded-full px-4 py-2.5 hover:border-neutral-400 transition-colors">
+                <span className="text-xs text-neutral-400 uppercase tracking-widest">{t.category}</span>
+                <span className="w-px h-3 bg-neutral-200" />
+                <span className="text-sm font-semibold text-neutral-800">{t.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Process ── */}
+      <section id="process" className="py-28 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <p className="text-xs text-neutral-400 uppercase tracking-[0.2em] font-medium mb-4">How It Works</p>
+            <h2 className="text-4xl md:text-5xl font-black text-neutral-900 tracking-tight">From idea to app store</h2>
+          </div>
+          <div className="flex flex-col gap-6">
+            {steps.map((step, i) => (
+              <div key={step.num} className={`grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-neutral-100 ${i % 2 === 1 ? "" : ""}`}>
+                <div className={`relative overflow-hidden ${i % 2 === 1 ? "lg:order-2" : ""}`} style={{ height: "320px" }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={step.img} alt={step.title} className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-black/30" />
+                  <div className="absolute top-7 left-7">
+                    <span className="text-7xl font-black text-white/10 leading-none">{step.num}</span>
+                  </div>
+                </div>
+                <div className={`flex flex-col justify-center p-10 bg-white ${i % 2 === 1 ? "lg:order-1" : ""}`}>
+                  <p className="text-xs text-neutral-400 uppercase tracking-[0.2em] font-medium mb-2">Step {step.num}</p>
+                  <h3 className="text-2xl font-black text-neutral-900 mb-4">{step.title}</h3>
+                  <p className="text-neutral-500 leading-relaxed">{step.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Split image + pricing ── */}
+      <section className="py-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          <div className="relative overflow-hidden" style={{ minHeight: "500px" }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=900&q=90&fit=crop"
+              alt="Gaming"
+              className="w-full h-full object-cover absolute inset-0"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent" />
+            <div className="relative z-10 p-14 flex flex-col justify-end h-full" style={{ minHeight: "500px" }}>
+              <p className="text-white font-black text-4xl md:text-5xl leading-tight tracking-tight mb-3">
+                Your game.<br />Our craft.
+              </p>
+              <p className="text-white/50 text-sm max-w-xs">We've built games for indie creators, startups, and enterprise clients around the world.</p>
+            </div>
+          </div>
+          <div className="bg-neutral-950 flex flex-col justify-center p-14">
+            <p className="text-xs text-neutral-500 uppercase tracking-[0.2em] font-medium mb-5">Pricing</p>
+            <p className="text-6xl md:text-7xl font-black text-white tracking-tight mb-2">From $999</p>
+            <p className="text-neutral-500 text-sm mb-8">21–60 days delivery · Full pipeline included</p>
+            <div className="flex flex-col gap-3 mb-10">
+              {["Game Design Document", "Prototype build", "Full production", "QA & playtesting", "Publishing support", "30-day post-launch support"].map(item => (
+                <div key={item} className="flex items-center gap-3">
+                  <div className="w-4 h-4 rounded-full bg-emerald-400/20 border border-emerald-400/40 flex items-center justify-center shrink-0">
+                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                  </div>
+                  <span className="text-neutral-300 text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
             <a
               href="/#contact"
-              className="inline-block bg-neutral-900 text-white font-medium px-10 py-3.5 rounded-full hover:bg-black transition-all duration-200 text-sm"
+              className="inline-flex items-center gap-3 bg-white text-neutral-900 font-semibold text-sm pl-7 pr-3 py-3.5 rounded-full hover:bg-neutral-100 transition-all w-fit"
             >
-              Get Started
+              Start Your Game
+              <span className="w-7 h-7 bg-neutral-900 rounded-full flex items-center justify-center text-white text-xs">↗</span>
             </a>
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-neutral-900">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2
-            className="text-3xl md:text-4xl font-bold text-white mb-4"
-            style={{ fontFamily: "'Playfair Display', serif" }}
-          >
-            Ready to get started?
+      {/* ── FAQ ── */}
+      <section className="py-28 px-6">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-xs text-neutral-400 uppercase tracking-[0.2em] font-medium mb-4">FAQ</p>
+            <h2 className="text-4xl font-black text-neutral-900 tracking-tight">Common questions</h2>
+          </div>
+          <div className="flex flex-col divide-y divide-neutral-100">
+            {faqs.map((faq) => (
+              <div key={faq.q} className="py-8">
+                <h3 className="font-bold text-neutral-900 text-base mb-3">{faq.q}</h3>
+                <p className="text-neutral-500 text-sm leading-relaxed">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Final CTA ── */}
+      <section className="relative overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1800&q=85&fit=crop"
+          alt="Gaming"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/80" />
+        <div className="relative z-10 py-32 px-6 text-center">
+          <p className="text-xs text-neutral-400 uppercase tracking-[0.2em] font-medium mb-5">Let's Build</p>
+          <h2 className="text-5xl md:text-6xl font-black text-white tracking-tight mb-6 max-w-2xl mx-auto leading-tight">
+            Have a game idea? Let's make it real.
           </h2>
-          <p className="text-neutral-400 mb-8">Tell us about your game idea and we will figure out the rest together.</p>
-          <a
-            href="/#contact"
-            className="inline-block bg-white text-neutral-900 font-medium px-10 py-3.5 rounded-full hover:bg-neutral-100 transition-all duration-200 text-sm"
-          >
-            Contact Us
-          </a>
+          <p className="text-white/50 max-w-md mx-auto mb-10 leading-relaxed">
+            Tell us your concept — genre, platform, rough scope — and we'll come back with a plan and a quote within 24 hours.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="/#contact"
+              className="flex items-center gap-3 bg-white text-neutral-900 font-semibold text-sm pl-7 pr-3 py-3.5 rounded-full hover:bg-neutral-100 transition-all"
+            >
+              Get a Free Quote
+              <span className="w-7 h-7 bg-neutral-900 rounded-full flex items-center justify-center text-white text-xs">↗</span>
+            </a>
+            <a
+              href="/portfolio"
+              className="flex items-center gap-3 border border-white/20 text-white font-semibold text-sm px-7 py-3.5 rounded-full hover:border-white/50 hover:bg-white/5 transition-all"
+            >
+              View Our Work
+            </a>
+          </div>
         </div>
       </section>
 
