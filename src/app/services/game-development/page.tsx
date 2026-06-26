@@ -2,23 +2,23 @@ import { GiGamepad, GiGears, GiPaintBucket, GiMultipleTargets, GiMagnifyingGlass
 
 export const metadata = {
   title: "Game Development — Limitless",
-  description: "Custom game development for PC, mobile, and web. From concept to launch — mechanics, art, UI, QA, and publishing support. We build games players actually want to play.",
+  description: "Indie PC game development for Steam. Co-op, horror, survival, RPG — built from concept to launch using Unity and Unreal Engine.",
 };
 
 const platforms = [
   {
-    title: "PC Games",
-    desc: "High-fidelity desktop games built for Steam, Epic, or direct distribution. From indie titles to complex simulations.",
-    img: "https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=800&q=85&fit=crop",
+    title: "Indie PC Games",
+    desc: "Dark atmospheric titles built for Steam. Co-op, horror, survival, and narrative-driven games that build communities.",
+    img: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&q=85&fit=crop",
   },
   {
     title: "Mobile Games",
-    desc: "Optimised iOS and Android games. Casual, hyper-casual, RPG, or puzzle — built to retain and monetise.",
+    desc: "iOS and Android games optimised for retention and monetisation. Casual, RPG, puzzle, and hyper-casual.",
     img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=85&fit=crop",
   },
   {
-    title: "Web & Browser Games",
-    desc: "Lightweight, shareable games that run in any browser. Perfect for marketing campaigns, MVPs, and viral products.",
+    title: "Multiplayer & Co-op",
+    desc: "Networked multiplayer systems — real-time co-op, PvP, and social mechanics that keep players coming back.",
     img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&q=85&fit=crop",
   },
 ];
@@ -136,11 +136,11 @@ export default function GameDevelopmentPage() {
               <p className="text-xs text-emerald-400 uppercase tracking-[0.25em] font-semibold">Available Now</p>
             </div>
             <h1 className="text-[clamp(56px,10vw,130px)] font-black text-white leading-[0.88] tracking-tighter mb-8 max-w-5xl">
-              Game<br /><span className="text-white/25">Develop</span>ment.
+              We Build<br /><span className="text-white/25">Games</span> That<br />Go Viral.
             </h1>
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
               <p className="text-lg md:text-xl text-white/60 max-w-lg leading-relaxed">
-                From concept to launch — PC, mobile, and web games built with Unity and Unreal Engine. We handle the full pipeline so you can focus on your vision.
+                Indie PC titles, co-op survival, horror, multiplayer — built for Steam using Unity and Unreal Engine. Full pipeline from GDD to launch day.
               </p>
               <div className="flex gap-4 shrink-0">
                 <a
@@ -164,7 +164,7 @@ export default function GameDevelopmentPage() {
         {/* Stats bar */}
         <div className="absolute bottom-0 left-0 right-0 border-t border-white/10 bg-black/40 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-6 md:px-16 py-5 flex flex-wrap gap-8 md:gap-16">
-            {[["PC, Mobile & Web", "Platforms"], ["Unity & Unreal", "Engines"], ["21–60 Days", "Delivery"], ["From $999", "Starting Price"]].map(([val, label]) => (
+            {[["PC, Mobile & Co-op", "Platforms"], ["Unity & Unreal", "Engines"], ["Steam Ready", "Publishing"], ["From $999", "Starting Price"]].map(([val, label]) => (
               <div key={label}>
                 <p className="text-white font-black text-lg leading-none">{val}</p>
                 <p className="text-white/40 text-xs uppercase tracking-widest mt-1">{label}</p>
@@ -180,13 +180,13 @@ export default function GameDevelopmentPage() {
           <div>
             <p className="text-xs text-neutral-400 uppercase tracking-[0.2em] font-medium mb-5">What We Do</p>
             <h2 className="text-4xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight mb-6">
-              We don't just build games.<br />We build experiences.
+              Indie games that build<br />real communities.
             </h2>
             <p className="text-neutral-500 text-lg leading-relaxed mb-5">
-              Most studios hand you a finished product and disappear. We take a different approach — working as your creative and technical partner from the first sketch to the last patch.
+              The biggest indie hits — Lethal Company, Among Us, Hollow Knight — didn't blow up because of marketing budgets. They blew up because the core mechanic was impossible to stop talking about. That's what we design for.
             </p>
             <p className="text-neutral-500 text-lg leading-relaxed mb-8">
-              Whether you have a fully fleshed-out design document or just a spark of an idea, we help you develop it into a game that players actually want to keep coming back to. We use Unity and Unreal Engine, support all major platforms, and handle everything from mechanics to monetisation.
+              We specialise in dark atmospheric PC games, co-op survival, horror, and multiplayer titles built for Steam. Whether you have a full GDD or just an idea, we work as your full dev team — from prototype to store page to post-launch content.
             </p>
             <div className="flex flex-wrap gap-3">
               {["Unity", "Unreal Engine", "PC", "iOS", "Android", "Web", "Steam", "App Store"].map(tag => (
@@ -383,10 +383,10 @@ export default function GameDevelopmentPage() {
         <div className="relative z-10 py-32 px-6 text-center">
           <p className="text-xs text-neutral-400 uppercase tracking-[0.2em] font-medium mb-5">Let's Build</p>
           <h2 className="text-5xl md:text-6xl font-black text-white tracking-tight mb-6 max-w-2xl mx-auto leading-tight">
-            Have a game idea? Let's make it real.
+            Got a game concept? Let's ship it.
           </h2>
           <p className="text-white/50 max-w-md mx-auto mb-10 leading-relaxed">
-            Tell us your concept — genre, platform, rough scope — and we'll come back with a plan and a quote within 24 hours.
+            Tell us the genre, the core mechanic, the platform — we'll come back with a full plan and quote within 24 hours. No commitment needed.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
