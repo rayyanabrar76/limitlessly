@@ -786,12 +786,6 @@ export default function PortfolioPage() {
     <main className="bg-white">
       <style>{mockupStyles}</style>
 
-      {/* Header */}
-      <div className="pt-32 pb-10 px-6 border-b border-neutral-100">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-black text-neutral-900 tracking-tight">Our Work.</h1>
-        </div>
-      </div>
 
       {/* Projects */}
       {projects.map((project, i) => {
