@@ -793,7 +793,7 @@ export default function PortfolioPage() {
         return (
           <section
             key={project.num}
-            className={`px-6 py-20 border-b border-neutral-100 ${i % 2 === 1 ? "bg-neutral-50" : "bg-white"}`}
+            className={`px-6 py-20 border-b border-neutral-100 ${i % 2 === 1 ? "bg-neutral-50" : "bg-white"} ${i === 0 ? "pt-36" : ""}`}
           >
             <div className="max-w-6xl mx-auto">
 
