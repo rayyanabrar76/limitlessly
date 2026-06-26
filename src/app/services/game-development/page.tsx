@@ -22,14 +22,14 @@ const platforms = [
 ];
 
 const features = [
-  { icon: "🎮", title: "Game Design", desc: "Core loop, mechanics, level design, economy — every system designed to keep players hooked." },
-  { icon: "⚙️", title: "Unity & Unreal", desc: "We work with industry-standard engines so your game is built on a foundation that scales." },
-  { icon: "🎨", title: "Art & Asset Integration", desc: "2D sprites, 3D models, animations — we integrate and optimise all your visual assets." },
-  { icon: "📱", title: "Cross-Platform", desc: "One game, many platforms. PC, Mac, iOS, Android, and web — we handle the porting." },
-  { icon: "🧪", title: "QA & Playtesting", desc: "Rigorous testing across devices and player types. We find the bugs before your players do." },
-  { icon: "🚀", title: "Publishing Support", desc: "Steam, App Store, Google Play — we guide you through every submission and approval process." },
-  { icon: "💰", title: "Monetisation", desc: "In-app purchases, ads, subscriptions, DLC — we build the systems that make your game profitable." },
-  { icon: "🔧", title: "Post-Launch Support", desc: "Updates, patches, new content — we stay with your game long after it launches." },
+  { num: "01", title: "Game Design", desc: "Core loop, mechanics, level design, economy — every system designed to keep players hooked." },
+  { num: "02", title: "Unity & Unreal", desc: "We work with industry-standard engines so your game is built on a foundation that scales." },
+  { num: "03", title: "Art & Asset Integration", desc: "2D sprites, 3D models, animations — we integrate and optimise all your visual assets." },
+  { num: "04", title: "Cross-Platform", desc: "One game, many platforms. PC, Mac, iOS, Android, and web — we handle the porting." },
+  { num: "05", title: "QA & Playtesting", desc: "Rigorous testing across devices and player types. We find the bugs before your players do." },
+  { num: "06", title: "Publishing Support", desc: "Steam, App Store, Google Play — we guide you through every submission and approval process." },
+  { num: "07", title: "Monetisation", desc: "In-app purchases, ads, subscriptions, DLC — we build the systems that make your game profitable." },
+  { num: "08", title: "Post-Launch Support", desc: "Updates, patches, new content — we stay with your game long after it launches." },
 ];
 
 const techStack = [
@@ -248,7 +248,7 @@ export default function GameDevelopmentPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {features.map((f) => (
               <div key={f.title} className="border border-neutral-100 rounded-2xl p-7 hover:border-neutral-300 hover:shadow-md transition-all duration-200 group">
-                <div className="text-3xl mb-5">{f.icon}</div>
+                <p className="text-xs font-mono text-neutral-300 mb-5">{f.num}</p>
                 <h3 className="font-bold text-neutral-900 text-base mb-2">{f.title}</h3>
                 <p className="text-neutral-500 text-sm leading-relaxed">{f.desc}</p>
               </div>
