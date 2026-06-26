@@ -125,7 +125,7 @@ export function CursorOverlay({ mockupType }: { mockupType: string }) {
   const [pos, setPos] = useState({ x: 50, y: 50 });
   const [ripples, setRipples] = useState<Array<{ id: number; x: number; y: number }>>([]);
   const idx = useRef(0);
-  const timer = useRef<ReturnType<typeof setTimeout>>();
+  const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const nextId = useRef(0);
 
   useEffect(() => {
