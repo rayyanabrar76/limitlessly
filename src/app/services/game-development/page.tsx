@@ -127,7 +127,7 @@ export default function GameDevelopmentPage() {
           alt="Game Development"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/60 to-black/90" />
 
         <div className="relative z-10 flex flex-col justify-end px-6 md:px-16 pb-24 pt-40" style={{ minHeight: "100vh" }}>
           <div className="max-w-7xl mx-auto w-full">
@@ -201,7 +201,7 @@ export default function GameDevelopmentPage() {
               alt="PC Gaming Setup"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
             <div className="absolute bottom-6 left-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl px-5 py-4">
               <p className="text-white font-bold text-sm">Full-pipeline development</p>
               <p className="text-white/60 text-xs mt-0.5">Concept → Prototype → Production → Launch</p>
@@ -229,7 +229,7 @@ export default function GameDevelopmentPage() {
               <div key={p.title} className="relative rounded-2xl overflow-hidden group" style={{ height: "360px" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-7">
                   <h3 className="text-2xl font-black text-white mb-2">{p.title}</h3>
                   <p className="text-white/60 text-sm leading-relaxed">{p.desc}</p>
@@ -320,7 +320,7 @@ export default function GameDevelopmentPage() {
               alt="Gaming"
               className="w-full h-full object-cover absolute inset-0"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-r from-black/70 to-transparent" />
             <div className="relative z-10 p-14 flex flex-col justify-end h-full" style={{ minHeight: "500px" }}>
               <p className="text-white font-black text-4xl md:text-5xl leading-tight tracking-tight mb-3">
                 Your game.<br />Our craft.
