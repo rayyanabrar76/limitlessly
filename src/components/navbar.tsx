@@ -10,11 +10,11 @@ const navItems = [
     label: "Services",
     href: "/services",
     dropdown: [
-      { label: "E-Commerce Store", desc: "Custom online stores built to sell", href: "/services" },
-      { label: "Business Website", desc: "Professional sites for your brand", href: "/services" },
-      { label: "Full Package", desc: "Complete online presence", href: "/services" },
-      { label: "Game Development", desc: "PC, mobile & web games from scratch", href: "/services" },
-      { label: "Pricing", desc: "Transparent pricing, no hidden fees", href: "/services" },
+      { label: "E-Commerce Store", desc: "Custom online stores built to sell", href: "/services/ecommerce" },
+      { label: "Business Website", desc: "Professional sites for your brand", href: "/services/business-website" },
+      { label: "Full Package", desc: "Complete online presence", href: "/services/full-package" },
+      { label: "Game Development", desc: "PC, mobile & web games from scratch", href: "/services/game-development" },
+      { label: "All Services & Pricing", desc: "Transparent pricing, no hidden fees", href: "/services" },
     ],
   },
   {
