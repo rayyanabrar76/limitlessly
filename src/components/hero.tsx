@@ -10,27 +10,23 @@ const HeroScene = dynamic(() => import("@/components/hero-scene"), {
 export default function Hero() {
 
   return (
-    <section className="min-h-screen bg-neutral-950 relative overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+    <section className="bg-neutral-950 relative overflow-hidden">
 
-      {/* ── LEFT — Text ── */}
-      <div className="relative flex flex-col px-8 md:px-14 lg:px-16 pt-35 pb-16 lg:pt-37.5 lg:pb-20 z-10">
+      {/* ── 3D Background — full width ── */}
+      <div className="absolute inset-0 z-0">
+        <HeroScene />
+      </div>
 
-        {/* Dot grid */}
-        <div
-          className="absolute inset-0 opacity-[0.13] pointer-events-none"
-          style={{
-            backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px)",
-            backgroundSize: "30px 30px",
-          }}
-        />
+      {/* Left dark gradient so text stays readable */}
+      <div className="absolute inset-0 z-10 pointer-events-none bg-linear-to-r from-neutral-950/95 via-neutral-950/60 to-transparent" />
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 z-10 pointer-events-none bg-linear-to-t from-neutral-950 to-transparent" />
 
-        {/* Ambient glow */}
-        <div
-          className="absolute top-1/3 -left-24 w-80 h-80 rounded-full blur-3xl opacity-[0.08] pointer-events-none animate-glow-drift-b"
-          style={{ background: "radial-gradient(circle, #818cf8, transparent 70%)" }}
-        />
+      {/* ── Text + Stats — sits on top ── */}
+      <div className="relative z-20 flex items-end justify-between px-8 md:px-14 lg:px-16 pt-44 pb-8 lg:pt-48 lg:pb-10">
 
-        <div className="relative flex flex-col gap-8 max-w-lg">
+        {/* Left — text */}
+        <div className="flex flex-col gap-4 max-w-lg">
 
           {/* Label */}
           <div className="flex items-center gap-3">
@@ -70,44 +66,27 @@ export default function Hero() {
               <span className="w-7 h-7 bg-white/10 rounded-full flex items-center justify-center text-white text-xs shrink-0">↗</span>
             </a>
           </div>
+        </div>
 
-          {/* Stats */}
-          <div className="flex items-center gap-8 pt-5 border-t border-white/8">
-            <div>
-              <p className="text-2xl font-black text-white tracking-tight">10+</p>
-              <p className="text-[10px] text-white/30 mt-0.5 uppercase tracking-[0.15em]">Projects Built</p>
-            </div>
-            <div className="w-px h-8 bg-white/10" />
-            <div>
-              <p className="text-2xl font-black text-white tracking-tight">100%</p>
-              <p className="text-[10px] text-white/30 mt-0.5 uppercase tracking-[0.15em]">Satisfaction</p>
-            </div>
-            <div className="w-px h-8 bg-white/10" />
-            <div>
-              <p className="text-2xl font-black text-white tracking-tight">3–21</p>
-              <p className="text-[10px] text-white/30 mt-0.5 uppercase tracking-[0.15em]">Day Delivery</p>
-            </div>
+        {/* Right — stats */}
+        <div className="hidden lg:flex flex-col gap-5 text-right pb-1">
+          <div>
+            <p className="text-3xl font-black text-white tracking-tight">10+</p>
+            <p className="text-[10px] text-white/30 mt-1 uppercase tracking-[0.15em]">Projects Built</p>
+          </div>
+          <div className="w-full h-px bg-white/10" />
+          <div>
+            <p className="text-3xl font-black text-white tracking-tight">100%</p>
+            <p className="text-[10px] text-white/30 mt-1 uppercase tracking-[0.15em]">Satisfaction</p>
+          </div>
+          <div className="w-full h-px bg-white/10" />
+          <div>
+            <p className="text-3xl font-black text-white tracking-tight">3–21</p>
+            <p className="text-[10px] text-white/30 mt-1 uppercase tracking-[0.15em]">Day Delivery</p>
           </div>
         </div>
+
       </div>
-
-      {/* ── RIGHT — 3D Scene ── */}
-      <div className="relative hidden lg:block overflow-hidden bg-neutral-950">
-        {/* Three.js canvas fills the panel */}
-        <div className="absolute inset-0">
-          <HeroScene />
-        </div>
-
-        {/* Left-edge blend into text panel */}
-        <div className="absolute inset-y-0 left-0 w-40 bg-linear-to-r from-neutral-950 to-transparent pointer-events-none z-10" />
-        {/* Top blend */}
-        <div className="absolute inset-x-0 top-0 h-28 bg-linear-to-b from-neutral-950/60 to-transparent pointer-events-none z-10" />
-        {/* Bottom blend */}
-        <div className="absolute inset-x-0 bottom-0 h-28 bg-linear-to-t from-neutral-950/60 to-transparent pointer-events-none z-10" />
-      </div>
-
-      {/* Mobile bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-neutral-950 to-transparent pointer-events-none z-10 lg:hidden" />
 
     </section>
   );
