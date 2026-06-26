@@ -24,14 +24,14 @@ const platforms = [
 ];
 
 const features = [
-  { Icon: GiGamepad, title: "Game Design", desc: "Core loop, mechanics, level design, economy — every system designed to keep players hooked." },
-  { Icon: GiGears, title: "Unity & Unreal", desc: "We work with industry-standard engines so your game is built on a foundation that scales." },
-  { Icon: GiPaintBucket, title: "Art & Asset Integration", desc: "2D sprites, 3D models, animations — we integrate and optimise all your visual assets." },
-  { Icon: GiMultipleTargets, title: "Cross-Platform", desc: "One game, many platforms. PC, Mac, iOS, Android, and web — we handle the porting." },
-  { Icon: GiMagnifyingGlass, title: "QA & Playtesting", desc: "Rigorous testing across devices and player types. We find the bugs before your players do." },
-  { Icon: GiRocketFlight, title: "Publishing Support", desc: "Steam, App Store, Google Play — we guide you through every submission and approval process." },
-  { Icon: GiMoneyStack, title: "Monetisation", desc: "In-app purchases, ads, subscriptions, DLC — we build the systems that make your game profitable." },
-  { Icon: GiWrench, title: "Post-Launch Support", desc: "Updates, patches, new content — we stay with your game long after it launches." },
+  { Icon: GiGamepad, color: "#6366f1", title: "Game Design", desc: "Core loop, mechanics, level design, economy — every system designed to keep players hooked." },
+  { Icon: GiGears, color: "#f59e0b", title: "Unity & Unreal", desc: "We work with industry-standard engines so your game is built on a foundation that scales." },
+  { Icon: GiPaintBucket, color: "#ec4899", title: "Art & Asset Integration", desc: "2D sprites, 3D models, animations — we integrate and optimise all your visual assets." },
+  { Icon: GiMultipleTargets, color: "#10b981", title: "Cross-Platform", desc: "One game, many platforms. PC, Mac, iOS, Android, and web — we handle the porting." },
+  { Icon: GiMagnifyingGlass, color: "#3b82f6", title: "QA & Playtesting", desc: "Rigorous testing across devices and player types. We find the bugs before your players do." },
+  { Icon: GiRocketFlight, color: "#f97316", title: "Publishing Support", desc: "Steam, App Store, Google Play — we guide you through every submission and approval process." },
+  { Icon: GiMoneyStack, color: "#22c55e", title: "Monetisation", desc: "In-app purchases, ads, subscriptions, DLC — we build the systems that make your game profitable." },
+  { Icon: GiWrench, color: "#8b5cf6", title: "Post-Launch Support", desc: "Updates, patches, new content — we stay with your game long after it launches." },
 ];
 
 const techStack = [
@@ -250,7 +250,7 @@ export default function GameDevelopmentPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {features.map((f) => (
               <div key={f.title} className="border border-neutral-100 rounded-2xl p-7 hover:border-neutral-300 hover:shadow-md transition-all duration-200 group">
-                <f.Icon size={28} className="text-neutral-400 mb-5" />
+                <f.Icon size={28} style={{ color: f.color }} className="mb-5" />
                 <h3 className="font-bold text-neutral-900 text-base mb-2">{f.title}</h3>
                 <p className="text-neutral-500 text-sm leading-relaxed">{f.desc}</p>
               </div>
