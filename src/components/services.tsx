@@ -27,6 +27,15 @@ const services = [
     features: ["Everything in both plans", "Priority Support", "Free Revisions", "1 Month Maintenance"],
     highlight: true,
   },
+  {
+    num: "04",
+    title: "Game Development",
+    description:
+      "Custom game development for PC, mobile, and web. From concept to launch — mechanics, UI, art integration, and publishing support. We build games that players actually want to play.",
+    price: "From $999",
+    delivery: "21–60 days",
+    features: ["PC & Mobile", "Unity / Unreal", "Game Design", "Publishing Support"],
+  },
 ];
 
 export default function Services() {
@@ -46,7 +55,7 @@ export default function Services() {
             </h2>
           </div>
           <p className="text-neutral-400 text-sm max-w-xs leading-relaxed">
-            Three focused services, built around what small businesses actually need — no bloat, no fluff.
+            Four focused services, built around what businesses actually need — no bloat, no fluff.
           </p>
         </div>
 
