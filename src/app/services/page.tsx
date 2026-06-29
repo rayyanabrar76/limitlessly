@@ -1,7 +1,17 @@
+import Link from "next/link";
+import { Globe, ShoppingBag, Smartphone, Code2, ArrowUpRight } from "lucide-react";
+
 export const metadata = {
   title: "Services — Limitless",
-  description: "AI SaaS platforms, custom AI agents, integrations, and rapid MVP sprints — built end-to-end for founders worldwide.",
+  description: "AI SaaS platforms, custom AI agents, integrations, and rapid MVP sprints — plus full-stack web, e-commerce, mobile, and custom software. Built end-to-end for founders worldwide.",
 };
+
+const devServices = [
+  { title: "Web Development", desc: "Fast, modern marketing sites and web apps that load instantly and convert.", Icon: Globe },
+  { title: "E-Commerce Development", desc: "Custom online stores built to sell — products, checkout, payments, and admin.", Icon: ShoppingBag },
+  { title: "Mobile App Development", desc: "iOS and Android apps, cross-platform, from prototype to the app store.", Icon: Smartphone },
+  { title: "Custom Software", desc: "Bespoke internal tools, dashboards, and systems tailored to your workflow.", Icon: Code2 },
+];
 
 const services = [
   {
@@ -164,14 +174,51 @@ export default function ServicesPage() {
                   ))}
                 </ul>
 
-                <a
+                <Link
                   href="/#contact"
                   className="mt-auto text-center py-3 rounded-full text-sm font-medium transition-all duration-200 bg-white text-neutral-900 hover:bg-neutral-200"
                 >
                   Get Started
-                </a>
+                </Link>
               </div>
             ))}
+          </div>
+
+          {/* Development services */}
+          <div className="mb-24">
+            <div className="text-center mb-12">
+              <p className="text-xs text-neutral-500 uppercase tracking-widest font-medium mb-4">Beyond AI</p>
+              <h2
+                className="text-3xl md:text-4xl font-bold text-white"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                Software Development
+              </h2>
+              <p className="text-neutral-400 max-w-xl mx-auto mt-4 leading-relaxed">
+                Need engineering muscle beyond AI? We build the full stack — web, commerce, mobile, and custom software.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {devServices.map((s) => (
+                <div
+                  key={s.title}
+                  className="group bg-white/5 border border-white/10 rounded-2xl p-7 hover:border-white/20 hover:-translate-y-1 transition-all duration-300"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-5">
+                    <s.Icon size={20} className="text-neutral-300" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">{s.title}</h3>
+                  <p className="text-sm text-neutral-400 leading-relaxed mb-5">{s.desc}</p>
+                  <Link
+                    href="/#contact"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-white group-hover:gap-2.5 transition-all"
+                  >
+                    Enquire
+                    <ArrowUpRight size={15} className="text-indigo-400" />
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Process */}
