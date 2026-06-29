@@ -11,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Limitless - Build Without Limits",
-  description: "We design and build custom e-commerce stores and websites for businesses ready to grow online.",
+  title: "Limitless — AI Product Studio",
+  description: "We design and build full-scale AI SaaS platforms — from idea to launch to scale. A product studio for ambitious founders worldwide.",
   verification: {
     google: "Uk3At5gc6OYWMn1zmULpfwsM7qycNYAYt_HFoC2_tFw",
   },
@@ -25,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
-      <body className="antialiased bg-white text-neutral-900">
+      <body className="antialiased bg-neutral-950 text-neutral-100">
         {/* The Navbar will now show on every page, including Blog posts */}
         <AnnouncementBar />
         <Navbar />

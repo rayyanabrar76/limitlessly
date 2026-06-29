@@ -39,7 +39,7 @@ const steps = [
 
 export default function BusinessWebsitePage() {
   return (
-    <main className="bg-white">
+    <main className="bg-neutral-950">
 
       <section className="relative w-full overflow-hidden" style={{ minHeight: "560px" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -74,21 +74,21 @@ export default function BusinessWebsitePage() {
             <p className="text-xs text-neutral-400 uppercase tracking-widest font-medium">What You Get</p>
           </div>
           <h2
-            className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6"
+            className="text-3xl md:text-4xl font-bold text-white mb-6"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Your business, online and looking its best
           </h2>
-          <p className="text-lg text-neutral-500 leading-relaxed max-w-2xl">
+          <p className="text-lg text-neutral-400 leading-relaxed max-w-2xl">
             A professional, fast, SEO-ready website that represents your business 24/7. We build you a complete online presence with a custom landing page, about section, services overview, and a contact form — all designed to turn visitors into customers or leads.
           </p>
-          <p className="text-lg text-neutral-500 leading-relaxed max-w-2xl mt-4">
+          <p className="text-lg text-neutral-400 leading-relaxed max-w-2xl mt-4">
             Perfect for freelancers, local businesses, agencies, and anyone who needs a clean, credible online presence without the agency price tag or the months of waiting.
           </p>
         </div>
       </section>
 
-      <section className="py-24 px-6 bg-neutral-50 border-y border-neutral-200">
+      <section className="py-24 px-6 bg-neutral-900/40 border-y border-white/10">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 mb-5">
@@ -97,7 +97,7 @@ export default function BusinessWebsitePage() {
               <span className="w-6 h-px bg-neutral-400"></span>
             </div>
             <h2
-              className="text-3xl md:text-4xl font-bold text-neutral-900"
+              className="text-3xl md:text-4xl font-bold text-white"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               Features
@@ -107,10 +107,10 @@ export default function BusinessWebsitePage() {
             {features.map((feature) => (
               <div
                 key={feature}
-                className="bg-white border border-neutral-200 rounded-2xl px-5 py-4 flex items-start gap-3 hover:border-neutral-300 hover:shadow-sm transition-all"
+                className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4 flex items-start gap-3 hover:border-white/20 hover:shadow-sm transition-all"
               >
-                <span className="text-neutral-900 font-bold mt-0.5 shrink-0">✓</span>
-                <span className="text-sm text-neutral-700 font-medium">{feature}</span>
+                <span className="text-white font-bold mt-0.5 shrink-0">✓</span>
+                <span className="text-sm text-neutral-300 font-medium">{feature}</span>
               </div>
             ))}
           </div>
@@ -126,7 +126,7 @@ export default function BusinessWebsitePage() {
               <span className="w-6 h-px bg-neutral-400"></span>
             </div>
             <h2
-              className="text-3xl md:text-4xl font-bold text-neutral-900"
+              className="text-3xl md:text-4xl font-bold text-white"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               Our Process
@@ -136,18 +136,18 @@ export default function BusinessWebsitePage() {
             {steps.map((item) => (
               <div
                 key={item.step}
-                className="bg-neutral-50 border border-neutral-200 rounded-2xl p-6 hover:border-neutral-300 hover:shadow-sm transition-all"
+                className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-white/20 hover:shadow-sm transition-all"
               >
-                <p className="text-4xl font-bold text-neutral-200 mb-4">{item.step}</p>
-                <h3 className="font-bold text-neutral-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-neutral-500 leading-relaxed">{item.description}</p>
+                <p className="text-4xl font-bold text-neutral-700 mb-4">{item.step}</p>
+                <h3 className="font-bold text-white mb-2">{item.title}</h3>
+                <p className="text-sm text-neutral-400 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-24 px-6 bg-neutral-50 border-y border-neutral-200">
+      <section className="py-24 px-6 bg-neutral-900/40 border-y border-white/10">
         <div className="max-w-2xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 mb-5">
             <span className="w-6 h-px bg-neutral-400"></span>
@@ -155,24 +155,24 @@ export default function BusinessWebsitePage() {
             <span className="w-6 h-px bg-neutral-400"></span>
           </div>
           <h2
-            className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4"
+            className="text-3xl md:text-4xl font-bold text-white mb-4"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Simple, Transparent Pricing
           </h2>
-          <p className="text-neutral-500 mb-10">No hidden fees. No surprises. Just great work delivered fast.</p>
-          <div className="bg-white border border-neutral-200 rounded-2xl p-10 shadow-sm">
+          <p className="text-neutral-400 mb-10">No hidden fees. No surprises. Just great work delivered fast.</p>
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-10 shadow-sm">
             <p className="text-xs text-neutral-400 uppercase tracking-widest mb-3 font-medium">3–7 days delivery</p>
             <p
-              className="text-6xl font-bold text-neutral-900 mb-2"
+              className="text-6xl font-bold text-white mb-2"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               From $299
             </p>
-            <p className="text-neutral-500 mb-8">Everything you need to launch your professional website.</p>
+            <p className="text-neutral-400 mb-8">Everything you need to launch your professional website.</p>
             <a
               href="/#contact"
-              className="inline-block bg-neutral-900 text-white font-medium px-10 py-3.5 rounded-full hover:bg-black transition-all duration-200 text-sm"
+              className="inline-block bg-white text-neutral-900 font-medium px-10 py-3.5 rounded-full hover:bg-neutral-200 transition-all duration-200 text-sm"
             >
               Get Started
             </a>
@@ -180,7 +180,7 @@ export default function BusinessWebsitePage() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-neutral-900">
+      <section className="py-20 px-6 bg-neutral-900 border border-white/10">
         <div className="max-w-3xl mx-auto text-center">
           <h2
             className="text-3xl md:text-4xl font-bold text-white mb-4"

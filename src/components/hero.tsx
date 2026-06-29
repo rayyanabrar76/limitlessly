@@ -31,22 +31,22 @@ export default function Hero() {
           {/* Label */}
           <div className="flex items-center gap-3">
             <span className="w-6 h-px bg-white/30" />
-            <p className="text-white/40 text-xs uppercase tracking-[0.25em] font-medium">Web Design Studio</p>
+            <p className="text-white/40 text-xs uppercase tracking-[0.25em] font-medium">AI Product Studio</p>
           </div>
 
           {/* Headline */}
           <h1 className="text-[clamp(52px,8.5vw,108px)] font-black text-white leading-[0.86] tracking-tighter">
             We Build
             <br />
-            <span className="text-white/20">The Web</span>
+            <span className="bg-linear-to-r from-indigo-400 via-violet-400 to-fuchsia-400 bg-clip-text text-transparent">AI Platforms</span>
             <br />
-            You Deserve.
+            That Scale.
           </h1>
 
           {/* Subtext */}
           <p className="text-white/45 text-base leading-relaxed max-w-sm">
-            Custom e-commerce stores and websites for businesses
-            ready to grow. Fast, modern, built to convert.
+            We design and build full-scale AI SaaS platforms — from
+            idea to launch to scale. For founders building what's next.
           </p>
 
           {/* CTAs */}
@@ -55,7 +55,7 @@ export default function Hero() {
               href="#contact"
               className="flex items-center gap-3 bg-white text-neutral-900 font-semibold text-sm pl-6 pr-2.5 py-2.5 rounded-full hover:bg-neutral-100 transition-all duration-200"
             >
-              Start a Project
+              Book a Call
               <span className="w-7 h-7 bg-neutral-900 rounded-full flex items-center justify-center text-white text-xs shrink-0">↗</span>
             </a>
             <a
@@ -72,17 +72,17 @@ export default function Hero() {
         <div className="hidden lg:flex flex-col gap-5 text-right pb-1">
           <div>
             <p className="text-3xl font-black text-white tracking-tight">10+</p>
-            <p className="text-[10px] text-white/30 mt-1 uppercase tracking-[0.15em]">Projects Built</p>
+            <p className="text-[10px] text-white/30 mt-1 uppercase tracking-[0.15em]">Platforms Shipped</p>
           </div>
           <div className="w-full h-px bg-white/10" />
           <div>
-            <p className="text-3xl font-black text-white tracking-tight">100%</p>
-            <p className="text-[10px] text-white/30 mt-1 uppercase tracking-[0.15em]">Satisfaction</p>
+            <p className="text-3xl font-black text-white tracking-tight">Global</p>
+            <p className="text-[10px] text-white/30 mt-1 uppercase tracking-[0.15em]">Founders Served</p>
           </div>
           <div className="w-full h-px bg-white/10" />
           <div>
-            <p className="text-3xl font-black text-white tracking-tight">3–21</p>
-            <p className="text-[10px] text-white/30 mt-1 uppercase tracking-[0.15em]">Day Delivery</p>
+            <p className="text-3xl font-black text-white tracking-tight">End-to-End</p>
+            <p className="text-[10px] text-white/30 mt-1 uppercase tracking-[0.15em]">Idea → Scale</p>
           </div>
         </div>
 

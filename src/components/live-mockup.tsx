@@ -66,21 +66,21 @@ export default function LiveMockup() {
   const { x, y, target } = STEPS[step];
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="py-24 bg-neutral-950 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
         <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-3 py-1 mb-5">
+          <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-full px-3 py-1 mb-5">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-[11px] font-semibold text-green-700 uppercase tracking-widest">Live Demo</span>
+            <span className="text-[11px] font-semibold text-green-400 uppercase tracking-widest">Live Demo</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-neutral-900 tracking-tight leading-[1.05] mb-3">
+          <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight leading-[1.05] mb-3">
             Your Idea<br />
-            <span className="text-neutral-300">Comes Alive</span>
+            <span className="bg-linear-to-r from-indigo-400 via-violet-400 to-fuchsia-400 bg-clip-text text-transparent">Comes Alive</span>
           </h2>
-          <p className="text-neutral-500 max-w-sm mx-auto text-sm leading-relaxed">
-            We turn any idea into a fully interactive digital product — free visual sample, no commitment.
+          <p className="text-neutral-400 max-w-sm mx-auto text-sm leading-relaxed">
+            We turn your idea into a fully interactive prototype — see your product working before a line of production code is written.
           </p>
         </div>
 
@@ -88,7 +88,7 @@ export default function LiveMockup() {
         <div className="relative mx-auto max-w-[900px]">
 
           {/* Ambient glow */}
-          <div className="absolute -inset-8 rounded-3xl bg-gradient-to-tr from-indigo-100/60 via-sky-50/40 to-violet-100/60 blur-3xl pointer-events-none" />
+          <div className="absolute -inset-8 rounded-3xl bg-linear-to-tr from-indigo-500/20 via-sky-500/10 to-fuchsia-500/20 blur-3xl pointer-events-none" />
 
           {/* Outer box controlling height */}
           <div
@@ -293,15 +293,15 @@ export default function LiveMockup() {
 
           {/* CTA below mockup */}
           <div className="mt-10 text-center">
-            <p className="text-sm text-neutral-500 mb-4">
-              We&apos;ll build something like this — for your idea — <span className="font-semibold text-neutral-900">for free.</span>
+            <p className="text-sm text-neutral-400 mb-4">
+              Want to see your idea like this? <span className="font-semibold text-white">We&apos;ll build you a live prototype.</span>
             </p>
             <a
               href="#contact"
-              className="inline-flex items-center gap-3 bg-neutral-900 text-white font-semibold text-sm pl-6 pr-2.5 py-2.5 rounded-full hover:bg-black transition-all duration-200"
+              className="inline-flex items-center gap-3 bg-white text-neutral-900 font-semibold text-sm pl-6 pr-2.5 py-2.5 rounded-full hover:bg-neutral-200 transition-all duration-200"
             >
-              Claim Your Free Sample
-              <span className="w-7 h-7 bg-white/15 rounded-full flex items-center justify-center text-xs shrink-0">↗</span>
+              Book a Call
+              <span className="w-7 h-7 bg-neutral-900/15 rounded-full flex items-center justify-center text-xs shrink-0">↗</span>
             </a>
           </div>
         </div>

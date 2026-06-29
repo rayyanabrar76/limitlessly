@@ -117,7 +117,7 @@ const faqs = [
 
 export default function GameDevelopmentPage() {
   return (
-    <main className="bg-white">
+    <main className="bg-neutral-950">
 
       {/* ── Hero ── */}
       <section className="relative w-full overflow-hidden" style={{ minHeight: "100vh" }}>
@@ -179,18 +179,18 @@ export default function GameDevelopmentPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <p className="text-xs text-neutral-400 uppercase tracking-[0.2em] font-medium mb-5">What We Do</p>
-            <h2 className="text-4xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight mb-6">
+            <h2 className="text-4xl md:text-5xl font-black text-white leading-tight tracking-tight mb-6">
               Indie games that build<br />real communities.
             </h2>
-            <p className="text-neutral-500 text-lg leading-relaxed mb-5">
+            <p className="text-neutral-300 text-lg leading-relaxed mb-5">
               The biggest indie hits — Lethal Company, Among Us, Hollow Knight — didn't blow up because of marketing budgets. They blew up because the core mechanic was impossible to stop talking about. That's what we design for.
             </p>
-            <p className="text-neutral-500 text-lg leading-relaxed mb-8">
+            <p className="text-neutral-300 text-lg leading-relaxed mb-8">
               We specialise in dark atmospheric PC games, co-op survival, horror, and multiplayer titles built for Steam. Whether you have a full GDD or just an idea, we work as your full dev team — from prototype to store page to post-launch content.
             </p>
             <div className="flex flex-wrap gap-3">
               {["Unity", "Unreal Engine", "PC", "iOS", "Android", "Web", "Steam", "App Store"].map(tag => (
-                <span key={tag} className="text-xs border border-neutral-200 text-neutral-500 px-3 py-1.5 rounded-full">{tag}</span>
+                <span key={tag} className="text-xs border border-white/10 text-neutral-400 px-3 py-1.5 rounded-full">{tag}</span>
               ))}
             </div>
           </div>
@@ -245,14 +245,14 @@ export default function GameDevelopmentPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-xs text-neutral-400 uppercase tracking-[0.2em] font-medium mb-4">Everything Included</p>
-            <h2 className="text-4xl md:text-5xl font-black text-neutral-900 tracking-tight">What's in the package</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">What's in the package</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {features.map((f) => (
-              <div key={f.title} className="border border-neutral-100 rounded-2xl p-7 hover:border-neutral-300 hover:shadow-md transition-all duration-200 group">
+              <div key={f.title} className="border border-white/10 rounded-2xl p-7 hover:border-white/20 hover:shadow-md transition-all duration-200 group">
                 <f.Icon size={28} style={{ color: f.color }} className="mb-5" />
-                <h3 className="font-bold text-neutral-900 text-base mb-2">{f.title}</h3>
-                <p className="text-neutral-500 text-sm leading-relaxed">{f.desc}</p>
+                <h3 className="font-bold text-white text-base mb-2">{f.title}</h3>
+                <p className="text-neutral-300 text-sm leading-relaxed">{f.desc}</p>
               </div>
             ))}
           </div>
@@ -260,21 +260,21 @@ export default function GameDevelopmentPage() {
       </section>
 
       {/* ── Tech Stack ── */}
-      <section className="py-20 px-6 bg-neutral-50 border-y border-neutral-100">
+      <section className="py-20 px-6 bg-neutral-900/40 border-y border-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12">
             <div>
               <p className="text-xs text-neutral-400 uppercase tracking-[0.2em] font-medium mb-3">Tech Stack</p>
-              <h2 className="text-3xl md:text-4xl font-black text-neutral-900 tracking-tight">Industry-standard tools</h2>
+              <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight">Industry-standard tools</h2>
             </div>
-            <p className="text-neutral-500 text-sm max-w-sm leading-relaxed">No experimental stacks. We use the same tools the world's best game studios rely on.</p>
+            <p className="text-neutral-300 text-sm max-w-sm leading-relaxed">No experimental stacks. We use the same tools the world's best game studios rely on.</p>
           </div>
           <div className="flex flex-wrap gap-3">
             {techStack.map((t) => (
-              <div key={t.name} className="flex items-center gap-2.5 bg-white border border-neutral-200 rounded-full px-4 py-2.5 hover:border-neutral-400 transition-colors">
+              <div key={t.name} className="flex items-center gap-2.5 bg-white/5 border border-white/10 rounded-full px-4 py-2.5 hover:border-white/20 transition-colors">
                 <span className="text-xs text-neutral-400 uppercase tracking-widest">{t.category}</span>
-                <span className="w-px h-3 bg-neutral-200" />
-                <span className="text-sm font-semibold text-neutral-800">{t.name}</span>
+                <span className="w-px h-3 bg-white/10" />
+                <span className="text-sm font-semibold text-white">{t.name}</span>
               </div>
             ))}
           </div>
@@ -286,11 +286,11 @@ export default function GameDevelopmentPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <p className="text-xs text-neutral-400 uppercase tracking-[0.2em] font-medium mb-4">How It Works</p>
-            <h2 className="text-4xl md:text-5xl font-black text-neutral-900 tracking-tight">From idea to app store</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">From idea to app store</h2>
           </div>
           <div className="flex flex-col gap-6">
             {steps.map((step, i) => (
-              <div key={step.num} className={`grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-neutral-100 ${i % 2 === 1 ? "" : ""}`}>
+              <div key={step.num} className={`grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-white/10 ${i % 2 === 1 ? "" : ""}`}>
                 <div className={`relative overflow-hidden ${i % 2 === 1 ? "lg:order-2" : ""}`} style={{ height: "320px" }}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={step.img} alt={step.title} className="w-full h-full object-cover" />
@@ -299,10 +299,10 @@ export default function GameDevelopmentPage() {
                     <span className="text-7xl font-black text-white/10 leading-none">{step.num}</span>
                   </div>
                 </div>
-                <div className={`flex flex-col justify-center p-10 bg-white ${i % 2 === 1 ? "lg:order-1" : ""}`}>
+                <div className={`flex flex-col justify-center p-10 bg-white/5 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
                   <p className="text-xs text-neutral-400 uppercase tracking-[0.2em] font-medium mb-2">Step {step.num}</p>
-                  <h3 className="text-2xl font-black text-neutral-900 mb-4">{step.title}</h3>
-                  <p className="text-neutral-500 leading-relaxed">{step.desc}</p>
+                  <h3 className="text-2xl font-black text-white mb-4">{step.title}</h3>
+                  <p className="text-neutral-300 leading-relaxed">{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -328,7 +328,7 @@ export default function GameDevelopmentPage() {
               <p className="text-white/50 text-sm max-w-xs">We've built games for indie creators, startups, and enterprise clients around the world.</p>
             </div>
           </div>
-          <div className="bg-neutral-950 flex flex-col justify-center p-14">
+          <div className="bg-neutral-950 border border-white/10 flex flex-col justify-center p-14">
             <p className="text-xs text-neutral-500 uppercase tracking-[0.2em] font-medium mb-5">Pricing</p>
             <p className="text-6xl md:text-7xl font-black text-white tracking-tight mb-2">From $999</p>
             <p className="text-neutral-500 text-sm mb-8">21–60 days delivery · Full pipeline included</p>
@@ -358,13 +358,13 @@ export default function GameDevelopmentPage() {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-xs text-neutral-400 uppercase tracking-[0.2em] font-medium mb-4">FAQ</p>
-            <h2 className="text-4xl font-black text-neutral-900 tracking-tight">Common questions</h2>
+            <h2 className="text-4xl font-black text-white tracking-tight">Common questions</h2>
           </div>
-          <div className="flex flex-col divide-y divide-neutral-100">
+          <div className="flex flex-col divide-y divide-white/10">
             {faqs.map((faq) => (
               <div key={faq.q} className="py-8">
-                <h3 className="font-bold text-neutral-900 text-base mb-3">{faq.q}</h3>
-                <p className="text-neutral-500 text-sm leading-relaxed">{faq.a}</p>
+                <h3 className="font-bold text-white text-base mb-3">{faq.q}</h3>
+                <p className="text-neutral-300 text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>

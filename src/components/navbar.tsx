@@ -10,20 +10,19 @@ const navItems = [
     label: "Services",
     href: "/services",
     dropdown: [
-      { label: "E-Commerce Store", desc: "Custom online stores built to sell", href: "/services/ecommerce" },
-      { label: "Business Website", desc: "Professional sites for your brand", href: "/services/business-website" },
-      { label: "Full Package", desc: "Complete online presence", href: "/services/full-package" },
-      { label: "Game Development", desc: "PC, mobile & web games from scratch", href: "/services/game-development" },
-      { label: "All Services & Pricing", desc: "Transparent pricing, no hidden fees", href: "/services" },
+      { label: "AI SaaS Platform", desc: "Full products, built to scale", href: "/services" },
+      { label: "AI Agents & Automation", desc: "Custom agents that run your ops", href: "/services" },
+      { label: "AI Integration", desc: "Add intelligence to your product", href: "/services" },
+      { label: "MVP Sprint", desc: "Idea to launched product, fast", href: "/services" },
+      { label: "All Services & Pricing", desc: "See how we scope every build", href: "/services" },
     ],
   },
   {
     label: "Portfolio",
     href: "/portfolio",
     dropdown: [
-      { label: "E-Commerce Projects", desc: "Online stores we have built", href: "/portfolio/ecommerce" },
-      { label: "Business Websites", desc: "Landing pages and business sites", href: "/portfolio/business-websites" },
-      { label: "Game Development", desc: "PC, mobile & co-op games", href: "/portfolio/game-development" },
+      { label: "SaaS Platforms", desc: "Full products we have engineered", href: "/portfolio" },
+      { label: "AI & Automation", desc: "Intelligent systems and agents", href: "/portfolio" },
       { label: "All Work", desc: "Browse everything we have built", href: "/portfolio" },
     ],
   },
@@ -123,7 +122,7 @@ export default function Navbar() {
               href="/contact"
               className="flex items-center gap-2 bg-neutral-900 text-white text-sm font-medium pl-5 pr-3 py-2 rounded-full hover:bg-black transition-all duration-200"
             >
-              Contact Us
+              Book a Call
               <span className="w-5 h-5 bg-white/15 rounded-full flex items-center justify-center text-xs leading-none">↗</span>
             </Link>
           </div>
@@ -157,7 +156,7 @@ export default function Navbar() {
                 className="flex items-center justify-center gap-2 bg-neutral-900 text-white text-sm font-medium px-5 py-3 rounded-full hover:bg-black transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
-                Contact Us <span>↗</span>
+                Book a Call <span>↗</span>
               </Link>
             </div>
           </div>

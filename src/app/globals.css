@@ -18,26 +18,26 @@
   }
 
   body {
-    background-color: #ffffff;
-    color: #0a0a0a;
+    background-color: #0a0a0a;
+    color: #ededed;
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
   }
 
   .prose {
-    --tw-prose-body: #525252;
-    --tw-prose-headings: #0a0a0a;
-    --tw-prose-links: #0a0a0a;
-    --tw-prose-bold: #0a0a0a;
-    --tw-prose-quotes: #737373;
-    --tw-prose-code: #0a0a0a;
-    --tw-prose-pre-bg: #f5f5f5;
-    --tw-prose-hr: #e5e5e5;
+    --tw-prose-body: #a3a3a3;
+    --tw-prose-headings: #ffffff;
+    --tw-prose-links: #ffffff;
+    --tw-prose-bold: #ffffff;
+    --tw-prose-quotes: #a3a3a3;
+    --tw-prose-code: #e5e5e5;
+    --tw-prose-pre-bg: #171717;
+    --tw-prose-hr: #262626;
   }
 
   ::selection {
-    background-color: #0a0a0a;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #0a0a0a;
   }
 
   ::-webkit-scrollbar {
@@ -45,16 +45,16 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #ffffff;
+    background: #0a0a0a;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #d4d4d4;
+    background: #404040;
     border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #a3a3a3;
+    background: #525252;
   }
 }
 

@@ -45,25 +45,25 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="bg-white min-h-screen text-neutral-900">
+    <main className="bg-neutral-950 min-h-screen text-neutral-100">
 
       <section className="pt-40 pb-24 px-6">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-20">
             <div className="inline-flex items-center gap-2 mb-5">
-              <span className="w-6 h-px bg-neutral-400"></span>
-              <p className="text-xs text-neutral-400 uppercase tracking-widest font-medium">Get In Touch</p>
-              <span className="w-6 h-px bg-neutral-400"></span>
+              <span className="w-6 h-px bg-neutral-600"></span>
+              <p className="text-xs text-neutral-500 uppercase tracking-widest font-medium">Get In Touch</p>
+              <span className="w-6 h-px bg-neutral-600"></span>
             </div>
             <h1
-              className="text-5xl md:text-6xl font-bold mb-6 text-neutral-900"
+              className="text-5xl md:text-6xl font-bold mb-6 text-white"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Start a Project
+              Book a Call
             </h1>
-            <p className="text-neutral-500 max-w-xl mx-auto text-lg leading-relaxed">
-              Tell us about your project and we will get back to you within 24 hours.
+            <p className="text-neutral-400 max-w-xl mx-auto text-lg leading-relaxed">
+              Tell us about your platform and we&apos;ll get back to you within 24 hours.
             </p>
           </div>
 
@@ -71,38 +71,38 @@ export default function ContactPage() {
             {/* Left - Info */}
             <div className="flex flex-col gap-8">
               <div>
-                <h2 className="text-2xl font-bold mb-6 text-neutral-900">What happens next?</h2>
+                <h2 className="text-2xl font-bold mb-6 text-white">What happens next?</h2>
                 <div className="flex flex-col gap-7">
                   {[
-                    { step: "01", title: "You fill out the form", desc: "Tell us about your project, budget, and goals." },
-                    { step: "02", title: "We reach out", desc: "We get back to you within 24 hours to discuss details." },
-                    { step: "03", title: "We start building", desc: "Once aligned, we get straight to work on your project." },
+                    { step: "01", title: "You tell us the vision", desc: "Share your idea, budget, and what you're trying to build." },
+                    { step: "02", title: "We map the path", desc: "A free strategy call within 24 hours to scope and architect it." },
+                    { step: "03", title: "We start building", desc: "Once aligned, we get straight to designing and engineering your platform." },
                   ].map((item) => (
                     <div key={item.step} className="flex gap-4">
-                      <span className="text-2xl font-bold text-neutral-200 shrink-0">{item.step}</span>
+                      <span className="text-2xl font-bold text-neutral-700 shrink-0">{item.step}</span>
                       <div>
-                        <p className="font-semibold text-neutral-900">{item.title}</p>
-                        <p className="text-sm text-neutral-500 mt-1 leading-relaxed">{item.desc}</p>
+                        <p className="font-semibold text-white">{item.title}</p>
+                        <p className="text-sm text-neutral-400 mt-1 leading-relaxed">{item.desc}</p>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="bg-neutral-50 border border-neutral-200 rounded-2xl p-6 flex flex-col gap-4">
-                <h3 className="font-bold text-neutral-900">Quick Info</h3>
-                <div className="flex flex-col gap-3 divide-y divide-neutral-100">
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-4">
+                <h3 className="font-bold text-white">Quick Info</h3>
+                <div className="flex flex-col gap-3 divide-y divide-white/10">
                   <div className="flex items-center gap-3 pb-3">
                     <span className="text-neutral-400 text-sm">Response time</span>
-                    <span className="text-neutral-900 text-sm ml-auto font-medium">Within 24 hours</span>
+                    <span className="text-white text-sm ml-auto font-medium">Within 24 hours</span>
                   </div>
                   <div className="flex items-center gap-3 py-3">
-                    <span className="text-neutral-400 text-sm">Starting price</span>
-                    <span className="text-neutral-900 text-sm ml-auto font-medium">$299</span>
+                    <span className="text-neutral-400 text-sm">Engagement</span>
+                    <span className="text-white text-sm ml-auto font-medium">Project or monthly</span>
                   </div>
                   <div className="flex items-center gap-3 pt-3">
-                    <span className="text-neutral-400 text-sm">Delivery</span>
-                    <span className="text-neutral-900 text-sm ml-auto font-medium">3-21 days</span>
+                    <span className="text-neutral-400 text-sm">Timeline</span>
+                    <span className="text-white text-sm ml-auto font-medium">From 2 weeks</span>
                   </div>
                 </div>
               </div>
@@ -111,22 +111,22 @@ export default function ContactPage() {
             {/* Right - Form */}
             <div>
               {submitted ? (
-                <div className="text-center py-24 bg-neutral-50 border border-neutral-200 rounded-2xl animate-in fade-in zoom-in duration-500">
-                  <p className="text-5xl mb-6 text-neutral-900">✓</p>
-                  <h3 className="text-2xl font-bold text-neutral-900 mb-2">Message Sent!</h3>
-                  <p className="text-neutral-500">Thank you for reaching out. Check your inbox soon.</p>
+                <div className="text-center py-24 bg-white/5 border border-white/10 rounded-2xl animate-in fade-in zoom-in duration-500">
+                  <p className="text-5xl mb-6 text-white">✓</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
+                  <p className="text-neutral-400">Thank you for reaching out. Check your inbox soon.</p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="mt-8 text-neutral-400 hover:text-neutral-900 transition-colors text-sm underline underline-offset-4"
+                    className="mt-8 text-neutral-400 hover:text-white transition-colors text-sm underline underline-offset-4"
                   >
                     Send another message
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="bg-white border border-neutral-200 rounded-2xl p-8 flex flex-col gap-6 shadow-sm">
+                <form onSubmit={handleSubmit} className="bg-neutral-900 border border-white/10 rounded-2xl p-8 flex flex-col gap-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="flex flex-col gap-2">
-                      <label className="text-sm text-neutral-600 font-medium">Your Name</label>
+                      <label className="text-sm text-neutral-300 font-medium">Your Name</label>
                       <input
                         type="text"
                         name="name"
@@ -134,11 +134,11 @@ export default function ContactPage() {
                         value={form.name}
                         onChange={handleChange}
                         placeholder="John Doe"
-                        className="bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-3 text-neutral-900 placeholder-neutral-300 focus:outline-none focus:border-neutral-400 focus:bg-white transition-all text-sm"
+                        className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all text-sm"
                       />
                     </div>
                     <div className="flex flex-col gap-2">
-                      <label className="text-sm text-neutral-600 font-medium">Email Address</label>
+                      <label className="text-sm text-neutral-300 font-medium">Email Address</label>
                       <input
                         type="email"
                         name="email"
@@ -146,29 +146,30 @@ export default function ContactPage() {
                         value={form.email}
                         onChange={handleChange}
                         placeholder="john@example.com"
-                        className="bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-3 text-neutral-900 placeholder-neutral-300 focus:outline-none focus:border-neutral-400 focus:bg-white transition-all text-sm"
+                        className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all text-sm"
                       />
                     </div>
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <label className="text-sm text-neutral-600 font-medium">Budget Range</label>
+                    <label className="text-sm text-neutral-300 font-medium">Budget Range</label>
                     <select
                       name="budget"
                       required
                       value={form.budget}
                       onChange={handleChange}
-                      className="bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-3 text-neutral-900 focus:outline-none focus:border-neutral-400 focus:bg-white transition-all cursor-pointer text-sm"
+                      className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all cursor-pointer text-sm"
                     >
-                      <option value="" disabled className="bg-white text-neutral-400">Select your budget</option>
-                      <option value="299-499" className="bg-white">$299 - $499</option>
-                      <option value="499-699" className="bg-white">$499 - $699</option>
-                      <option value="699+" className="bg-white">$699+</option>
+                      <option value="" disabled className="bg-neutral-900 text-neutral-400">Select your budget</option>
+                      <option value="under-10k" className="bg-neutral-900">Under $10k</option>
+                      <option value="10k-25k" className="bg-neutral-900">$10k - $25k</option>
+                      <option value="25k-50k" className="bg-neutral-900">$25k - $50k</option>
+                      <option value="50k+" className="bg-neutral-900">$50k+</option>
                     </select>
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <label className="text-sm text-neutral-600 font-medium">Tell us about your project</label>
+                    <label className="text-sm text-neutral-300 font-medium">Tell us about your project</label>
                     <textarea
                       name="message"
                       required
@@ -176,14 +177,14 @@ export default function ContactPage() {
                       onChange={handleChange}
                       placeholder="Describe your vision..."
                       rows={5}
-                      className="bg-neutral-50 border border-neutral-200 rounded-xl px-4 py-3 text-neutral-900 placeholder-neutral-300 focus:outline-none focus:border-neutral-400 focus:bg-white transition-all resize-none text-sm"
+                      className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all resize-none text-sm"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={loading}
-                    className="bg-neutral-900 text-white font-semibold py-4 rounded-full hover:bg-black transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                    className="bg-white text-neutral-900 font-semibold py-4 rounded-full hover:bg-neutral-200 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
                   >
                     {loading ? "Sending..." : "Send Message"}
                   </button>

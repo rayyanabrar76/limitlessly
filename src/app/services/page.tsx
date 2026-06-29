@@ -1,78 +1,78 @@
 export const metadata = {
   title: "Services — Limitless",
-  description: "See what we offer at Limitless.",
+  description: "AI SaaS platforms, custom AI agents, integrations, and rapid MVP sprints — built end-to-end for founders worldwide.",
 };
 
 const services = [
   {
-    title: "E-Commerce Store",
-    price: "From $499",
-    delivery: "7-14 days",
+    title: "AI SaaS Platform",
+    price: "Custom",
+    delivery: "From 6 weeks",
     description:
-      "A fully custom online store built to sell. We handle everything from product pages to checkout and payments so you can focus on running your business.",
+      "Your full product, designed and engineered end-to-end. Built on real, scalable architecture with AI at the core — ready for your first user and your millionth.",
     features: [
-      "Custom design tailored to your brand",
-      "Product listing and management",
-      "Shopping cart and checkout",
-      "Stripe payment integration",
-      "Mobile responsive",
-      "Admin dashboard",
-      "Order management",
-      "SEO optimized",
-    ],
-    highlight: false,
-  },
-  {
-    title: "Full Package",
-    price: "From $699",
-    delivery: "10-21 days",
-    description:
-      "The complete online presence. A business website plus a fully functional e-commerce store, all under one roof. Best value for serious businesses.",
-    features: [
-      "Everything in E-Commerce plan",
-      "Full business landing page",
-      "About and services pages",
-      "Contact form with email notifications",
-      "Priority support",
-      "Free revisions",
-      "Faster delivery",
-      "1 month free maintenance",
+      "Product design & UX",
+      "Multi-tenant architecture",
+      "AI / LLM core features",
+      "Auth, billing & dashboards",
+      "Stripe subscriptions",
+      "Scalable cloud infra",
+      "Analytics & admin tools",
+      "Launch & handover",
     ],
     highlight: true,
   },
   {
-    title: "Business Website",
-    price: "From $299",
-    delivery: "3-7 days",
+    title: "AI Agents & Automation",
+    price: "From $2k/mo",
+    delivery: "From 2 weeks",
     description:
-      "A professional website that represents your brand 24/7. Clean, fast, and built to convert visitors into customers or leads.",
+      "Custom AI agents and automations that run your operations around the clock — support, lead handling, data workflows, and internal tools. Billed monthly.",
     features: [
-      "Custom landing page",
-      "About and services sections",
-      "Contact form",
-      "Mobile responsive",
-      "SEO optimized",
-      "Fast loading",
-      "Deployed and ready to go",
-      "Social media links",
+      "Custom AI agents",
+      "Workflow automation",
+      "LLM pipelines & RAG",
+      "Integrations with your stack",
+      "Human-in-the-loop controls",
+      "Monitoring & evals",
+      "Ongoing optimization",
+      "Priority support",
     ],
     highlight: false,
   },
   {
-    title: "Game Development",
-    price: "From $999",
-    delivery: "21-60 days",
+    title: "AI Integration",
+    price: "Custom",
+    delivery: "From 3 weeks",
     description:
-      "Custom game development for PC, mobile, and web. From concept to launch — mechanics, UI, art integration, and publishing support. We build games players actually want to play.",
+      "Already have a product? We embed intelligence into it — chat, semantic search, recommendations, generation, and copilots — wired cleanly into your existing stack.",
     features: [
-      "PC, mobile & web platforms",
-      "Unity / Unreal Engine",
-      "Game design & mechanics",
-      "UI/UX for games",
-      "Art & asset integration",
-      "QA & playtesting",
-      "Publishing support",
-      "Post-launch maintenance",
+      "RAG & semantic search",
+      "In-product copilots",
+      "Content generation",
+      "Recommendations",
+      "API & data integration",
+      "Eval & tuning",
+      "Cost optimization",
+      "Documentation",
+    ],
+    highlight: false,
+  },
+  {
+    title: "MVP Sprint",
+    price: "From $9k",
+    delivery: "From 4 weeks",
+    description:
+      "Idea to launched product, fast. We take a founder's vision and ship a real, fundable MVP — designed, built, and live — without the year-long timeline.",
+    features: [
+      "Rapid product design",
+      "Full-stack build",
+      "Core AI feature",
+      "Investor-ready polish",
+      "Auth & payments",
+      "Deployed to production",
+      "Launch support",
+      "Path to scale",
     ],
     highlight: false,
   },
@@ -82,28 +82,28 @@ const process = [
   {
     step: "01",
     title: "Discovery",
-    description: "We start with a quick call or message to understand your business, goals, and what you need.",
+    description: "We pressure-test the idea, define the product, and architect for scale — so we build the right thing from day one.",
   },
   {
     step: "02",
     title: "Design & Build",
-    description: "We design and build your site using modern technology. You get updates along the way.",
+    description: "We design the product and engineer it end-to-end with modern, AI-native tech. You get progress in tight, transparent cycles.",
   },
   {
     step: "03",
-    title: "Review",
-    description: "You review the finished product and we make any adjustments until you are happy.",
+    title: "Launch",
+    description: "We ship to production — fast, secure, and ready for real users and investors.",
   },
   {
     step: "04",
-    title: "Launch",
-    description: "We deploy your site and hand over everything. You are live and ready to grow.",
+    title: "Scale",
+    description: "We harden, optimize, and grow with you — new features, more users, lower costs.",
   },
 ];
 
 export default function ServicesPage() {
   return (
-    <main className="bg-white">
+    <main className="bg-neutral-950">
 
       <section className="pt-40 pb-24 px-6">
         <div className="max-w-7xl mx-auto">
@@ -111,18 +111,18 @@ export default function ServicesPage() {
           {/* Header */}
           <div className="text-center mb-20">
             <div className="inline-flex items-center gap-2 mb-5">
-              <span className="w-6 h-px bg-neutral-400"></span>
-              <p className="text-xs text-neutral-400 uppercase tracking-widest font-medium">What We Offer</p>
-              <span className="w-6 h-px bg-neutral-400"></span>
+              <span className="w-6 h-px bg-neutral-600"></span>
+              <p className="text-xs text-neutral-500 uppercase tracking-widest font-medium">What We Offer</p>
+              <span className="w-6 h-px bg-neutral-600"></span>
             </div>
             <h1
-              className="text-5xl md:text-6xl font-bold mb-6 text-neutral-900"
+              className="text-5xl md:text-6xl font-bold mb-6 text-white"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               Services &amp; Pricing
             </h1>
-            <p className="text-neutral-500 max-w-xl mx-auto text-lg leading-relaxed">
-              Transparent pricing. No hidden fees. Just great work delivered fast.
+            <p className="text-neutral-400 max-w-xl mx-auto text-lg leading-relaxed">
+              From a single AI feature to a full platform. Scoped to your vision, engineered to scale.
             </p>
           </div>
 
@@ -133,22 +133,22 @@ export default function ServicesPage() {
                 key={service.title}
                 className={`relative rounded-2xl p-8 border flex flex-col gap-6 transition-all duration-300 hover:-translate-y-1 ${
                   service.highlight
-                    ? "bg-neutral-900 text-white border-neutral-900 shadow-2xl shadow-black/20"
-                    : "bg-white text-neutral-900 border-neutral-200 shadow-sm hover:shadow-md hover:border-neutral-300"
+                    ? "bg-neutral-900 text-white border-indigo-500/50 shadow-2xl shadow-indigo-500/10"
+                    : "bg-white/5 text-white border-white/10 hover:border-white/20"
                 }`}
               >
                 {service.highlight && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-neutral-900 text-xs font-semibold px-4 py-1 rounded-full border border-neutral-200 shadow-sm">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-linear-to-r from-indigo-500 to-fuchsia-500 text-white text-xs font-semibold px-4 py-1 rounded-full shadow-sm">
                     Best Value
                   </div>
                 )}
 
                 <div>
-                  <p className={`text-xs uppercase tracking-widest mb-2 font-medium ${service.highlight ? "text-neutral-400" : "text-neutral-400"}`}>
+                  <p className="text-xs uppercase tracking-widest mb-2 font-medium text-neutral-400">
                     {service.delivery} delivery
                   </p>
                   <h2 className="text-2xl font-bold mb-2">{service.title}</h2>
-                  <p className={`text-sm leading-relaxed ${service.highlight ? "text-neutral-400" : "text-neutral-500"}`}>
+                  <p className="text-sm leading-relaxed text-neutral-400">
                     {service.description}
                   </p>
                 </div>
@@ -158,19 +158,15 @@ export default function ServicesPage() {
                 <ul className="flex flex-col gap-3">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-2.5 text-sm">
-                      <span className={`mt-0.5 ${service.highlight ? "text-white" : "text-neutral-900"}`}>✓</span>
-                      <span className={service.highlight ? "text-neutral-300" : "text-neutral-600"}>{feature}</span>
+                      <span className={`mt-0.5 ${service.highlight ? "text-fuchsia-400" : "text-indigo-400"}`}>✓</span>
+                      <span className="text-neutral-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 <a
                   href="/#contact"
-                  className={`mt-auto text-center py-3 rounded-full text-sm font-medium transition-all duration-200 ${
-                    service.highlight
-                      ? "bg-white text-neutral-900 hover:bg-neutral-100"
-                      : "bg-neutral-900 text-white hover:bg-black"
-                  }`}
+                  className="mt-auto text-center py-3 rounded-full text-sm font-medium transition-all duration-200 bg-white text-neutral-900 hover:bg-neutral-200"
                 >
                   Get Started
                 </a>
@@ -182,7 +178,7 @@ export default function ServicesPage() {
           <div className="mb-24">
             <div className="text-center mb-12">
               <h2
-                className="text-3xl md:text-4xl font-bold text-neutral-900"
+                className="text-3xl md:text-4xl font-bold text-white"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 How It Works
@@ -190,29 +186,29 @@ export default function ServicesPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {process.map((item) => (
-                <div key={item.step} className="bg-neutral-50 border border-neutral-200 rounded-2xl p-6 hover:border-neutral-300 hover:shadow-sm transition-all">
-                  <p className="text-4xl font-bold text-neutral-200 mb-4">{item.step}</p>
-                  <h3 className="font-bold text-neutral-900 mb-2">{item.title}</h3>
-                  <p className="text-sm text-neutral-500 leading-relaxed">{item.description}</p>
+                <div key={item.step} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all">
+                  <p className="text-4xl font-bold text-neutral-700 mb-4">{item.step}</p>
+                  <h3 className="font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-sm text-neutral-400 leading-relaxed">{item.description}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* CTA */}
-          <div className="text-center bg-neutral-900 rounded-2xl p-12">
+          <div className="text-center bg-neutral-900 border border-white/10 rounded-2xl p-12">
             <h2
               className="text-3xl font-bold mb-4 text-white"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              Not sure which plan is right for you?
+              Not sure where your idea fits?
             </h2>
-            <p className="text-neutral-400 mb-8">Reach out and we will help you figure it out.</p>
+            <p className="text-neutral-400 mb-8">Book a free strategy call and we&apos;ll map the path from idea to platform.</p>
             <a
-              href="/#contact"
+              href="/contact"
               className="bg-white text-neutral-900 font-medium px-8 py-3 rounded-full hover:bg-neutral-100 transition-all duration-200"
             >
-              Talk to Us
+              Book a Call
             </a>
           </div>
 

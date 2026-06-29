@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Portfolio — Limitless",
-  description: "Every project we have built — detailed, real, and live.",
+  description: "Real platforms and products we have engineered — SaaS, AI tools, and marketplaces. Live, in production, serving thousands.",
 };
 
 const projects = [
@@ -114,12 +114,12 @@ const projects = [
   {
     num: "05",
     title: "LinkedIn Bulk Opener",
-    category: "Productivity Tool",
+    category: "AI Productivity Tool",
     year: "2025",
     status: "Live",
     url: "profileopener.netlify.app",
     href: "https://profileopener.netlify.app/",
-    tagline: "Open 100+ LinkedIn profiles in under a minute — used by 10,000+ recruiters globally.",
+    tagline: "An AI tool that opens 100+ LinkedIn profiles in under a minute — used by 10,000+ recruiters globally.",
     description: "Built for recruiters spending hours manually opening profiles. Paste a list of names, open all profiles simultaneously. Auto-detects CEOs for any company and exports the full lead list as a spreadsheet. Grew to 10,000+ users with zero paid marketing.",
     highlights: [
       "Opens 100+ LinkedIn profiles in under a minute",
@@ -783,9 +783,27 @@ function Mockup({ project }: { project: typeof projects[0] }) {
 
 export default function PortfolioPage() {
   return (
-    <main className="bg-white">
+    <main className="bg-neutral-950">
       <style>{mockupStyles}</style>
 
+      {/* Intro */}
+      <section className="px-6 pt-40 pb-16 bg-neutral-950">
+        <div className="max-w-6xl mx-auto">
+          <div className="inline-flex items-center gap-2 mb-6">
+            <span className="w-6 h-px bg-neutral-600" />
+            <p className="text-xs text-neutral-500 uppercase tracking-widest font-medium">Selected Work</p>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight leading-[1.05] mb-6 max-w-3xl">
+            Real platforms.
+            <br />
+            <span className="bg-linear-to-r from-indigo-400 via-violet-400 to-fuchsia-400 bg-clip-text text-transparent">In production. At scale.</span>
+          </h1>
+          <p className="text-neutral-400 text-lg leading-relaxed max-w-2xl">
+            Not mockups or concepts — live products serving thousands of real users.
+            SaaS platforms, AI tools, and marketplaces, engineered end-to-end for founders worldwide.
+          </p>
+        </div>
+      </section>
 
       {/* Projects */}
       {projects.map((project, i) => {
@@ -793,14 +811,14 @@ export default function PortfolioPage() {
         return (
           <section
             key={project.num}
-            className={`px-6 py-20 border-b border-neutral-100 ${i % 2 === 1 ? "bg-neutral-50" : "bg-white"} ${i === 0 ? "pt-36" : ""}`}
+            className={`px-6 py-20 border-b border-white/10 ${i % 2 === 1 ? "bg-neutral-900/40" : "bg-neutral-950"}`}
           >
             <div className="max-w-6xl mx-auto">
 
               {/* Big number */}
               <p
                 className="text-[100px] md:text-[140px] font-black leading-none tracking-tighter mb-2 select-none"
-                style={{ color: "transparent", WebkitTextStroke: "2px #111111" }}
+                style={{ color: "transparent", WebkitTextStroke: "2px rgba(255,255,255,0.14)" }}
               >
                 {project.num}
               </p>
@@ -825,16 +843,16 @@ export default function PortfolioPage() {
                     </span>
                   </div>
 
-                  <h2 className="text-3xl md:text-4xl font-black text-neutral-900 tracking-tight leading-tight mb-4">
+                  <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight leading-tight mb-4">
                     {project.title}
                   </h2>
 
-                  <p className="text-neutral-600 leading-relaxed mb-6">{project.description}</p>
+                  <p className="text-neutral-400 leading-relaxed mb-6">{project.description}</p>
 
                   {/* Highlights */}
                   <ul className="flex flex-col gap-2.5 mb-8">
                     {project.highlights.map((h) => (
-                      <li key={h} className="flex items-start gap-3 text-sm text-neutral-600">
+                      <li key={h} className="flex items-start gap-3 text-sm text-neutral-300">
                         <span className={`mt-1.5 w-1.5 h-1.5 rounded-full shrink-0`} style={{ background: project.accent }} />
                         {h}
                       </li>
@@ -846,7 +864,7 @@ export default function PortfolioPage() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className={`text-xs font-medium px-3 py-1.5 rounded-full border ${project.accentBg} ${project.accentBorder} ${project.accentText}`}
+                        className="text-xs font-medium px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-neutral-300"
                       >
                         {tag}
                       </span>
@@ -870,14 +888,14 @@ export default function PortfolioPage() {
       <section className="px-6 py-24 bg-neutral-900">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
-            <h2 className="text-4xl font-black text-white tracking-tight mb-3">Want to be next?</h2>
-            <p className="text-neutral-400 text-lg">Tell us your idea — we will build it.</p>
+            <h2 className="text-4xl font-black text-white tracking-tight mb-3">Your platform could be next.</h2>
+            <p className="text-neutral-400 text-lg">Bring us the vision — we&apos;ll engineer it from idea to scale.</p>
           </div>
           <Link
             href="/contact"
             className="inline-flex items-center gap-3 bg-white text-neutral-900 font-semibold text-sm pl-7 pr-3 py-3 rounded-full hover:bg-neutral-100 transition-all shrink-0"
           >
-            Start a Project
+            Book a Call
             <span className="w-8 h-8 bg-neutral-900 rounded-full flex items-center justify-center text-white text-xs">↗</span>
           </Link>
         </div>

@@ -39,7 +39,7 @@ const steps = [
 
 export default function FullPackagePage() {
   return (
-    <main className="bg-white">
+    <main className="bg-neutral-950">
 
       <section className="relative w-full overflow-hidden" style={{ minHeight: "560px" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -75,34 +75,34 @@ export default function FullPackagePage() {
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="inline-flex items-center gap-2 mb-6">
-            <span className="w-6 h-px bg-neutral-400"></span>
+            <span className="w-6 h-px bg-neutral-500"></span>
             <p className="text-xs text-neutral-400 uppercase tracking-widest font-medium">What You Get</p>
           </div>
           <h2
-            className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6"
+            className="text-3xl md:text-4xl font-bold text-white mb-6"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Everything you need, nothing you don&apos;t
           </h2>
-          <p className="text-lg text-neutral-500 leading-relaxed max-w-2xl">
+          <p className="text-lg text-neutral-400 leading-relaxed max-w-2xl">
             The Full Package combines our Business Website and E-Commerce Store into one seamless solution. You get a professional brand presence and a fully functional online store — all built together, all under one roof. This is the best value option for serious businesses that want to do it right from the start.
           </p>
-          <p className="text-lg text-neutral-500 leading-relaxed max-w-2xl mt-4">
+          <p className="text-lg text-neutral-400 leading-relaxed max-w-2xl mt-4">
             You also get priority support, free revisions, a dedicated account manager, and one month of free maintenance after launch. If you are serious about your online presence, this is the plan for you.
           </p>
         </div>
       </section>
 
-      <section className="py-24 px-6 bg-neutral-50 border-y border-neutral-200">
+      <section className="py-24 px-6 bg-neutral-900/40 border-y border-white/10">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 mb-5">
-              <span className="w-6 h-px bg-neutral-400"></span>
+              <span className="w-6 h-px bg-neutral-500"></span>
               <p className="text-xs text-neutral-400 uppercase tracking-widest font-medium">Everything Included</p>
-              <span className="w-6 h-px bg-neutral-400"></span>
+              <span className="w-6 h-px bg-neutral-500"></span>
             </div>
             <h2
-              className="text-3xl md:text-4xl font-bold text-neutral-900"
+              className="text-3xl md:text-4xl font-bold text-white"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               Features
@@ -112,7 +112,7 @@ export default function FullPackagePage() {
             {features.map((feature) => (
               <div
                 key={feature}
-                className="bg-neutral-900 border border-neutral-800 rounded-2xl px-5 py-4 flex items-start gap-3 hover:border-neutral-700 hover:shadow-sm transition-all"
+                className="bg-neutral-900 border border-white/10 rounded-2xl px-5 py-4 flex items-start gap-3 hover:border-white/20 hover:shadow-sm transition-all"
               >
                 <span className="text-white font-bold mt-0.5 shrink-0">✓</span>
                 <span className="text-sm text-neutral-300 font-medium">{feature}</span>
@@ -126,12 +126,12 @@ export default function FullPackagePage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 mb-5">
-              <span className="w-6 h-px bg-neutral-400"></span>
+              <span className="w-6 h-px bg-neutral-500"></span>
               <p className="text-xs text-neutral-400 uppercase tracking-widest font-medium">How It Works</p>
-              <span className="w-6 h-px bg-neutral-400"></span>
+              <span className="w-6 h-px bg-neutral-500"></span>
             </div>
             <h2
-              className="text-3xl md:text-4xl font-bold text-neutral-900"
+              className="text-3xl md:text-4xl font-bold text-white"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               Our Process
@@ -141,33 +141,33 @@ export default function FullPackagePage() {
             {steps.map((item) => (
               <div
                 key={item.step}
-                className="bg-neutral-50 border border-neutral-200 rounded-2xl p-6 hover:border-neutral-300 hover:shadow-sm transition-all"
+                className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-white/20 hover:shadow-sm transition-all"
               >
-                <p className="text-4xl font-bold text-neutral-200 mb-4">{item.step}</p>
-                <h3 className="font-bold text-neutral-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-neutral-500 leading-relaxed">{item.description}</p>
+                <p className="text-4xl font-bold text-neutral-700 mb-4">{item.step}</p>
+                <h3 className="font-bold text-white mb-2">{item.title}</h3>
+                <p className="text-sm text-neutral-400 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-24 px-6 bg-neutral-50 border-y border-neutral-200">
+      <section className="py-24 px-6 bg-neutral-900/40 border-y border-white/10">
         <div className="max-w-2xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 mb-5">
-            <span className="w-6 h-px bg-neutral-400"></span>
+            <span className="w-6 h-px bg-neutral-500"></span>
             <p className="text-xs text-neutral-400 uppercase tracking-widest font-medium">Pricing</p>
-            <span className="w-6 h-px bg-neutral-400"></span>
+            <span className="w-6 h-px bg-neutral-500"></span>
           </div>
           <h2
-            className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4"
+            className="text-3xl md:text-4xl font-bold text-white mb-4"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Simple, Transparent Pricing
           </h2>
-          <p className="text-neutral-500 mb-10">No hidden fees. No surprises. Just great work delivered fast.</p>
-          <div className="relative bg-neutral-900 border border-neutral-800 rounded-2xl p-10 shadow-2xl shadow-black/20">
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-neutral-900 text-xs font-semibold px-4 py-1 rounded-full border border-neutral-200 shadow-sm">
+          <p className="text-neutral-400 mb-10">No hidden fees. No surprises. Just great work delivered fast.</p>
+          <div className="relative bg-neutral-900 border border-indigo-500/50 rounded-2xl p-10 shadow-2xl shadow-black/20">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-linear-to-r from-indigo-500 to-fuchsia-500 text-white text-xs font-semibold px-4 py-1 rounded-full border border-white/10 shadow-sm">
               Best Value
             </div>
             <p className="text-xs text-neutral-400 uppercase tracking-widest mb-3 font-medium">10–21 days delivery</p>
@@ -188,7 +188,7 @@ export default function FullPackagePage() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-neutral-900">
+      <section className="py-20 px-6 bg-neutral-900 border border-white/10">
         <div className="max-w-3xl mx-auto text-center">
           <h2
             className="text-3xl md:text-4xl font-bold text-white mb-4"

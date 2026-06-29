@@ -1,14 +1,14 @@
 const items = [
-  "E-Commerce Stores",
-  "Business Websites",
-  "Custom Design",
+  "AI SaaS Platforms",
+  "Custom AI Agents",
+  "LLM Integration",
+  "RAG & Search",
+  "Multi-Tenant Architecture",
+  "Stripe Billing",
   "Next.js",
-  "Stripe Payments",
-  "Fast Delivery",
-  "SEO Optimized",
-  "Mobile Responsive",
-  "Admin Dashboards",
-  "Vercel Deployed",
+  "Scalable Infrastructure",
+  "MVP Sprints",
+  "Built to Scale",
 ];
 
 export default function MarqueeStrip() {

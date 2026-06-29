@@ -212,18 +212,18 @@ function MockupContent({ type }: { type: string }) {
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-28 px-6 bg-white border-t border-neutral-100">
+    <section id="portfolio" className="py-28 px-6 bg-neutral-950 border-t border-white/10">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
-              <p className="text-xs text-neutral-400 uppercase tracking-[0.2em] font-medium">Selected Work</p>
+              <div className="w-1.5 h-1.5 rounded-full bg-neutral-500" />
+              <p className="text-xs text-neutral-500 uppercase tracking-[0.2em] font-medium">Selected Work</p>
             </div>
             <h2
-              className="text-4xl md:text-5xl font-black text-neutral-900 leading-tight"
+              className="text-4xl md:text-5xl font-black text-white leading-tight"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               Projects that ship.
@@ -231,7 +231,7 @@ export default function Portfolio() {
           </div>
           <a
             href="/portfolio"
-            className="group inline-flex items-center gap-2 text-sm font-semibold text-neutral-500 hover:text-neutral-900 transition-colors shrink-0"
+            className="group inline-flex items-center gap-2 text-sm font-semibold text-neutral-400 hover:text-white transition-colors shrink-0"
           >
             View all work
             <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -243,7 +243,7 @@ export default function Portfolio() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="group grid grid-cols-1 md:grid-cols-12 border border-neutral-200 rounded-2xl overflow-hidden hover:border-neutral-300 hover:shadow-lg hover:shadow-black/5 transition-all duration-300 bg-white"
+              className="group grid grid-cols-1 md:grid-cols-12 border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 hover:shadow-lg hover:shadow-black/20 transition-all duration-300 bg-neutral-900"
             >
               {/* Left: mockup fills full height edge-to-edge */}
               <div className="md:col-span-5 relative overflow-hidden" style={{ minHeight: 210 }}>
@@ -258,7 +258,7 @@ export default function Portfolio() {
               </div>
 
               {/* Right: content */}
-              <div className="md:col-span-7 flex flex-col justify-between p-7 border-l border-neutral-100">
+              <div className="md:col-span-7 flex flex-col justify-between p-7 border-l border-white/5">
                 {/* Top row: category + icon badge */}
                 <div>
                   <div className="flex items-center justify-between mb-3">
@@ -277,14 +277,14 @@ export default function Portfolio() {
                     </div>
                     <a
                       href="/portfolio"
-                      className="w-8 h-8 rounded-full border border-neutral-200 flex items-center justify-center text-neutral-400 group-hover:bg-neutral-900 group-hover:text-white group-hover:border-neutral-900 transition-all duration-200"
+                      className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-neutral-400 group-hover:bg-white group-hover:text-neutral-900 group-hover:border-white transition-all duration-200"
                     >
                       <ArrowUpRight size={14} />
                     </a>
                   </div>
 
-                  <h3 className="text-xl font-black text-neutral-900 mb-2 tracking-tight">{project.title}</h3>
-                  <p className="text-sm text-neutral-500 leading-relaxed">{project.description}</p>
+                  <h3 className="text-xl font-black text-white mb-2 tracking-tight">{project.title}</h3>
+                  <p className="text-sm text-neutral-400 leading-relaxed">{project.description}</p>
                 </div>
 
                 {/* Tags */}
@@ -292,7 +292,7 @@ export default function Portfolio() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs bg-neutral-50 border border-neutral-200 text-neutral-500 px-2.5 py-0.5 rounded-full font-medium"
+                      className="text-xs bg-white/5 border border-white/10 text-neutral-400 px-2.5 py-0.5 rounded-full font-medium"
                     >
                       {tag}
                     </span>
@@ -304,13 +304,13 @@ export default function Portfolio() {
         </div>
 
         {/* Footer CTA */}
-        <div className="mt-10 flex items-center justify-between pt-8 border-t border-neutral-100">
+        <div className="mt-10 flex items-center justify-between pt-8 border-t border-white/10">
           <p className="text-sm text-neutral-400">
-            <span className="font-semibold text-neutral-900">07 projects</span> built from scratch — no templates, no shortcuts.
+            <span className="font-semibold text-white">Real platforms</span> — engineered from scratch, no templates, no shortcuts.
           </p>
           <a
             href="/portfolio"
-            className="group inline-flex items-center gap-2.5 bg-neutral-900 text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-neutral-700 transition-colors"
+            className="group inline-flex items-center gap-2.5 bg-white text-neutral-900 text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-neutral-200 transition-colors"
           >
             See full portfolio
             <ArrowUpRight size={15} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
