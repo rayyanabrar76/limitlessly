@@ -42,16 +42,8 @@ const navItems = [
       { label: "All Work", desc: "Browse everything we have built", href: "/portfolio" },
     ],
   },
-  {
-    label: "Blog",
-    href: "/blog",
-    dropdown: [
-      { label: "E-Commerce", desc: "How to Build a Successful Store in 2026", href: "/blog/ecommerce-guide" },
-      { label: "Performance", desc: "Why Next.js is the Future of Business Websites", href: "/blog/why-nextjs-is-better" },
-      { label: "Case Studies", desc: "How Custom Design Increases Conversions", href: "/blog/design-for-conversions" },
-    ],
-  },
-  { label: "About", href: "/about" },
+  { label: "About Us", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
