@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import AnnouncementBar from "@/components/announcement-bar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,7 +26,6 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
       <body className="antialiased bg-neutral-950 text-neutral-100">
         {/* The Navbar will now show on every page, including Blog posts */}
-        <AnnouncementBar />
         <Navbar />
 
         {/* This container ensures content doesn't get hidden behind a fixed Navbar */}

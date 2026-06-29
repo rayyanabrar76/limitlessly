@@ -116,3 +116,30 @@
 }
 .animate-glow-drift-a { animation: glow-drift-a 20s ease-in-out infinite; will-change: transform; }
 .animate-glow-drift-b { animation: glow-drift-b 25s ease-in-out infinite; will-change: transform; }
+
+/* Staggered entrance */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); filter: blur(6px); }
+  to   { opacity: 1; transform: translateY(0);    filter: blur(0); }
+}
+.animate-rise {
+  animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Animated gradient text shimmer */
+@keyframes text-shimmer {
+  to { background-position: 200% center; }
+}
+.animate-text-shimmer {
+  background-size: 200% auto;
+  animation: text-shimmer 5s linear infinite;
+}
+
+/* Slow pulse for CTA glow */
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.45; }
+  50%      { opacity: 0.85; }
+}
+.animate-glow-pulse {
+  animation: glow-pulse 4s ease-in-out infinite;
+}

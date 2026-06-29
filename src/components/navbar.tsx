@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 const navItems = [
@@ -41,7 +40,17 @@ const navItems = [
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 16);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   function handleMouseEnter(label: string) {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -55,20 +64,20 @@ export default function Navbar() {
   return (
     <>
       {/* Floating Pill Nav */}
-      <nav className="fixed top-11.5 left-0 right-0 z-50 px-4 flex justify-center">
-        <div className="w-full max-w-4xl bg-white border border-neutral-200 rounded-full shadow-md shadow-black/5 px-4 py-2 flex items-center justify-between">
+      <nav className="fixed top-4 left-0 right-0 z-50 px-4 flex justify-center">
+        <div
+          className={`w-full max-w-4xl rounded-full px-4 py-2 flex items-center justify-between border transition-all duration-300 ${
+            scrolled
+              ? "bg-neutral-900/80 border-white/10 shadow-lg shadow-black/40 backdrop-blur-xl"
+              : "bg-neutral-900/40 border-white/[0.07] backdrop-blur-md"
+          }`}
+        >
 
           {/* Logo */}
-          <Link href="/" className="flex items-center shrink-0">
-            <Image
-              src="/logo one.png"
-              alt="Limitlessly"
-              width={360}
-              height={120}
-              priority
-              className="h-9 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
-              quality={100}
-            />
+          <Link href="/" className="flex items-center shrink-0 pl-2">
+            <span className="text-xl font-extrabold tracking-tight text-white lowercase hover:opacity-80 transition-opacity">
+              limitlessly
+            </span>
           </Link>
 
           {/* Desktop Nav Links */}
@@ -82,7 +91,7 @@ export default function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className="flex items-center gap-1 px-3.5 py-1.5 text-sm text-neutral-500 hover:text-neutral-900 transition-colors rounded-full hover:bg-neutral-100"
+                  className="flex items-center gap-1 px-3.5 py-1.5 text-sm text-neutral-400 hover:text-white transition-colors rounded-full hover:bg-white/5"
                 >
                   {item.label}
                   {item.dropdown && (
@@ -96,7 +105,7 @@ export default function Navbar() {
                 {/* Dropdown */}
                 {item.dropdown && activeDropdown === item.label && (
                   <div
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-64 bg-white border border-neutral-200 rounded-2xl p-2 shadow-xl shadow-black/8"
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-64 bg-neutral-900/95 backdrop-blur-xl border border-white/10 rounded-2xl p-2 shadow-xl shadow-black/50"
                     onMouseEnter={() => handleMouseEnter(item.label)}
                     onMouseLeave={handleMouseLeave}
                   >
@@ -104,10 +113,10 @@ export default function Navbar() {
                       <Link
                         key={drop.label}
                         href={drop.href}
-                        className="flex flex-col gap-0.5 p-3 rounded-xl hover:bg-neutral-50 transition-colors"
+                        className="flex flex-col gap-0.5 p-3 rounded-xl hover:bg-white/5 transition-colors"
                       >
-                        <p className="text-sm font-medium text-neutral-900">{drop.label}</p>
-                        <p className="text-xs text-neutral-400">{drop.desc}</p>
+                        <p className="text-sm font-medium text-white">{drop.label}</p>
+                        <p className="text-xs text-neutral-500">{drop.desc}</p>
                       </Link>
                     ))}
                   </div>
@@ -120,16 +129,16 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-2 shrink-0">
             <Link
               href="/contact"
-              className="flex items-center gap-2 bg-neutral-900 text-white text-sm font-medium pl-5 pr-3 py-2 rounded-full hover:bg-black transition-all duration-200"
+              className="group flex items-center gap-2 bg-white text-neutral-900 text-sm font-semibold pl-5 pr-2 py-2 rounded-full hover:bg-neutral-200 transition-all duration-200"
             >
               Book a Call
-              <span className="w-5 h-5 bg-white/15 rounded-full flex items-center justify-center text-xs leading-none">↗</span>
+              <span className="w-5 h-5 bg-neutral-900 rounded-full flex items-center justify-center text-white text-[10px] leading-none group-hover:rotate-45 transition-transform duration-200">↗</span>
             </Link>
           </div>
 
           {/* Mobile Toggle */}
           <button
-            className="md:hidden text-neutral-700 p-1.5 hover:bg-neutral-100 rounded-full transition-colors"
+            className="md:hidden text-neutral-200 p-1.5 hover:bg-white/10 rounded-full transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
@@ -138,22 +147,22 @@ export default function Navbar() {
 
         {/* Mobile Menu — drops below the pill */}
         {mobileOpen && (
-          <div className="absolute top-full left-4 right-4 mt-2 bg-white border border-neutral-200 rounded-2xl shadow-xl p-5 flex flex-col gap-1">
+          <div className="absolute top-full left-4 right-4 mt-2 bg-neutral-900/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl shadow-black/50 p-5 flex flex-col gap-1">
             {navItems.map((item) => (
               <div key={item.label}>
                 <Link
                   href={item.href}
-                  className="block py-2.5 px-3 text-sm text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50 rounded-xl transition-colors font-medium"
+                  className="block py-2.5 px-3 text-sm text-neutral-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors font-medium"
                   onClick={() => setMobileOpen(false)}
                 >
                   {item.label}
                 </Link>
               </div>
             ))}
-            <div className="pt-3 border-t border-neutral-100 mt-1">
+            <div className="pt-3 border-t border-white/10 mt-1">
               <Link
                 href="/contact"
-                className="flex items-center justify-center gap-2 bg-neutral-900 text-white text-sm font-medium px-5 py-3 rounded-full hover:bg-black transition-colors"
+                className="flex items-center justify-center gap-2 bg-white text-neutral-900 text-sm font-semibold px-5 py-3 rounded-full hover:bg-neutral-200 transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
                 Book a Call <span>↗</span>

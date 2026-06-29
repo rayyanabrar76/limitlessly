@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -50,15 +49,10 @@ export default function Footer() {
       <footer className="border-t border-white/10 py-8 px-6 bg-neutral-950">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-5">
 
-          <Link href="/" className="opacity-70 hover:opacity-100 transition-opacity">
-            <Image
-              src="/logo one.png"
-              alt="Limitlessly"
-              width={260}
-              height={86}
-              className="h-5 w-auto object-contain"
-              quality={100}
-            />
+          <Link href="/" className="opacity-80 hover:opacity-100 transition-opacity">
+            <span className="text-lg font-extrabold tracking-tight text-white lowercase">
+              limitlessly
+            </span>
           </Link>
 
           <div className="flex items-center gap-8">

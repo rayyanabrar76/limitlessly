@@ -1,93 +1,167 @@
 "use client";
 
-import dynamic from "next/dynamic";
+import { useState } from "react";
+import {
+  SiOpenai,
+  SiNextdotjs,
+  SiTypescript,
+  SiStripe,
+  SiPostgresql,
+  SiVercel,
+} from "react-icons/si";
 
-const HeroScene = dynamic(() => import("@/components/hero-scene"), {
-  ssr: false,
-  loading: () => null,
-});
+const tech = [SiOpenai, SiNextdotjs, SiTypescript, SiPostgresql, SiStripe, SiVercel];
 
 export default function Hero() {
+  const [pos, setPos] = useState({ x: 50, y: 32 });
 
   return (
-    <section className="bg-neutral-950 relative overflow-hidden">
+    <section
+      onMouseMove={(e) => {
+        const r = e.currentTarget.getBoundingClientRect();
+        setPos({
+          x: ((e.clientX - r.left) / r.width) * 100,
+          y: ((e.clientY - r.top) / r.height) * 100,
+        });
+      }}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-neutral-950 px-6"
+    >
+      {/* ── Masked grid ── */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, rgba(255,255,255,0.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.045) 1px, transparent 1px)",
+          backgroundSize: "64px 64px",
+          maskImage:
+            "radial-gradient(ellipse 65% 55% at 50% 38%, #000 55%, transparent 100%)",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 65% 55% at 50% 38%, #000 55%, transparent 100%)",
+        }}
+      />
 
-      {/* ── 3D Background — full width ── */}
-      <div className="absolute inset-0 z-0">
-        <HeroScene />
+      {/* ── Top light beam ── */}
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-170 h-85 z-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse at top, rgba(139,92,246,0.20), transparent 70%)",
+        }}
+      />
+
+      {/* ── Ambient gradient orbs ── */}
+      <div className="absolute top-[14%] left-1/2 -translate-x-1/2 w-225 h-155 z-0 pointer-events-none">
+        <div className="absolute left-4 top-0 w-110 h-110 rounded-full bg-indigo-600/25 blur-[130px] animate-glow-drift-a" />
+        <div className="absolute right-4 top-12 w-110 h-110 rounded-full bg-fuchsia-600/20 blur-[130px] animate-glow-drift-b" />
+        <div className="absolute left-1/3 bottom-0 w-95 h-95 rounded-full bg-violet-600/20 blur-[130px] animate-glow-drift-a" />
       </div>
 
-      {/* Left dark gradient so text stays readable */}
-      <div className="absolute inset-0 z-10 pointer-events-none bg-linear-to-r from-neutral-950/95 via-neutral-950/60 to-transparent" />
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 z-10 pointer-events-none bg-linear-to-t from-neutral-950 to-transparent" />
+      {/* ── Mouse spotlight ── */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          background: `radial-gradient(560px circle at ${pos.x}% ${pos.y}%, rgba(139,92,246,0.12), transparent 42%)`,
+        }}
+      />
 
-      {/* ── Text + Stats — sits on top ── */}
-      <div className="relative z-20 flex items-end justify-between px-8 md:px-14 lg:px-16 pt-44 pb-8 lg:pt-48 lg:pb-10">
+      {/* ── Film grain ── */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none opacity-[0.035] mix-blend-overlay"
+        style={{
+          backgroundImage:
+            "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
+        }}
+      />
 
-        {/* Left — text */}
-        <div className="flex flex-col gap-4 max-w-lg">
+      {/* ── Top + bottom fades ── */}
+      <div className="absolute top-0 inset-x-0 h-40 z-0 bg-linear-to-b from-neutral-950 via-neutral-950/70 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 inset-x-0 h-40 z-0 bg-linear-to-t from-neutral-950 to-transparent pointer-events-none" />
 
-          {/* Label */}
-          <div className="flex items-center gap-3">
-            <span className="w-6 h-px bg-white/30" />
-            <p className="text-white/40 text-xs uppercase tracking-[0.25em] font-medium">AI Product Studio</p>
-          </div>
+      {/* ── Content ── */}
+      <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center pt-28 pb-20">
 
-          {/* Headline */}
-          <h1 className="text-[clamp(52px,8.5vw,108px)] font-black text-white leading-[0.86] tracking-tighter">
-            We Build
-            <br />
-            <span className="bg-linear-to-r from-indigo-400 via-violet-400 to-fuchsia-400 bg-clip-text text-transparent">AI Platforms</span>
-            <br />
-            That Scale.
-          </h1>
+        {/* Announcement pill */}
+        <a
+          href="/portfolio"
+          className="group inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/5 backdrop-blur px-4 py-1.5 text-xs font-medium text-neutral-300 mb-9 hover:border-white/20 hover:bg-white/10 transition-colors animate-rise"
+        >
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+          </span>
+          Now taking on new founders for 2026
+          <span className="text-neutral-500 group-hover:translate-x-0.5 transition-transform">→</span>
+        </a>
 
-          {/* Subtext */}
-          <p className="text-white/45 text-base leading-relaxed max-w-sm">
-            We design and build full-scale AI SaaS platforms — from
-            idea to launch to scale. For founders building what's next.
-          </p>
+        {/* Headline */}
+        <h1
+          className="text-[clamp(40px,7.2vw,84px)] font-black text-white leading-[0.95] tracking-tighter mb-7 animate-rise"
+          style={{ animationDelay: "0.08s" }}
+        >
+          The studio behind
+          <br />
+          tomorrow&apos;s{" "}
+          <span
+            className="bg-clip-text text-transparent animate-text-shimmer"
+            style={{
+              backgroundImage:
+                "linear-gradient(110deg, #a5b4fc 20%, #d8b4fe 40%, #f5d0fe 50%, #d8b4fe 60%, #a5b4fc 80%)",
+            }}
+          >
+            AI platforms
+          </span>
+          .
+        </h1>
 
-          {/* CTAs */}
-          <div className="flex items-center gap-3 flex-wrap">
+        {/* Subtext */}
+        <p
+          className="text-lg text-neutral-400 max-w-2xl leading-relaxed mb-10 animate-rise"
+          style={{ animationDelay: "0.18s" }}
+        >
+          We design and engineer full-scale AI SaaS products — from the first
+          idea to millions of users. For ambitious founders building what&apos;s next.
+        </p>
+
+        {/* CTAs */}
+        <div
+          className="flex flex-wrap items-center justify-center gap-3 mb-16 animate-rise"
+          style={{ animationDelay: "0.28s" }}
+        >
+          <div className="relative">
+            <div className="absolute -inset-0.75 rounded-full bg-linear-to-r from-indigo-500 via-violet-500 to-fuchsia-500 blur-md opacity-60 animate-glow-pulse" />
             <a
-              href="#contact"
-              className="flex items-center gap-3 bg-white text-neutral-900 font-semibold text-sm pl-6 pr-2.5 py-2.5 rounded-full hover:bg-neutral-100 transition-all duration-200"
+              href="/contact"
+              className="relative group flex items-center gap-3 bg-white text-neutral-900 font-semibold text-sm pl-6 pr-2.5 py-3 rounded-full hover:bg-neutral-200 transition-all duration-200"
             >
               Book a Call
-              <span className="w-7 h-7 bg-neutral-900 rounded-full flex items-center justify-center text-white text-xs shrink-0">↗</span>
-            </a>
-            <a
-              href="/portfolio"
-              className="flex items-center gap-3 border border-white/20 text-white font-semibold text-sm pl-6 pr-2.5 py-2.5 rounded-full hover:border-white/50 hover:bg-white/5 transition-all duration-200"
-            >
-              View Our Work
-              <span className="w-7 h-7 bg-white/10 rounded-full flex items-center justify-center text-white text-xs shrink-0">↗</span>
+              <span className="w-7 h-7 bg-neutral-900 rounded-full flex items-center justify-center text-white text-xs shrink-0 group-hover:rotate-45 transition-transform duration-200">↗</span>
             </a>
           </div>
+          <a
+            href="/portfolio"
+            className="flex items-center gap-2 border border-white/15 text-white font-semibold text-sm px-6 py-3 rounded-full hover:border-white/30 hover:bg-white/5 transition-all duration-200 backdrop-blur"
+          >
+            View our work
+          </a>
         </div>
 
-        {/* Right — stats */}
-        <div className="hidden lg:flex flex-col gap-5 text-right pb-1">
-          <div>
-            <p className="text-3xl font-black text-white tracking-tight">10+</p>
-            <p className="text-[10px] text-white/30 mt-1 uppercase tracking-[0.15em]">Platforms Shipped</p>
-          </div>
-          <div className="w-full h-px bg-white/10" />
-          <div>
-            <p className="text-3xl font-black text-white tracking-tight">Global</p>
-            <p className="text-[10px] text-white/30 mt-1 uppercase tracking-[0.15em]">Founders Served</p>
-          </div>
-          <div className="w-full h-px bg-white/10" />
-          <div>
-            <p className="text-3xl font-black text-white tracking-tight">End-to-End</p>
-            <p className="text-[10px] text-white/30 mt-1 uppercase tracking-[0.15em]">Idea → Scale</p>
+        {/* Tech trust row */}
+        <div className="animate-rise" style={{ animationDelay: "0.4s" }}>
+          <p className="text-[11px] uppercase tracking-[0.22em] text-neutral-600 mb-6">
+            Built on a modern AI-native stack
+          </p>
+          <div className="flex items-center justify-center gap-7 sm:gap-10">
+            {tech.map((Icon, i) => (
+              <Icon
+                key={i}
+                className="text-neutral-600 hover:text-neutral-300 transition-colors duration-300"
+                size={26}
+              />
+            ))}
           </div>
         </div>
 
       </div>
-
     </section>
   );
 }
