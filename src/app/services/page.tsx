@@ -5,7 +5,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Services — Limitless",
+  title: "Services — Limitlessly",
   description: "AI SaaS platforms, custom AI agents, integrations, and rapid MVP sprints — plus full-stack web, e-commerce, mobile, and custom software. Built end-to-end for founders worldwide.",
 };
 
@@ -227,13 +227,15 @@ export default function ServicesPage() {
             <p className="text-neutral-400 max-w-md mx-auto mb-8">
               Book a free strategy call and we&apos;ll map the path from idea to platform.
             </p>
-            <Link
-              href="/contact"
+            <a
+              href="https://calendly.com/rayyanabrar76/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 bg-white text-neutral-900 font-semibold text-sm pl-6 pr-2.5 py-3 rounded-full hover:bg-neutral-200 transition-all"
             >
               Book a Call
               <span className="w-7 h-7 bg-neutral-900 rounded-full flex items-center justify-center text-white text-xs group-hover:rotate-45 transition-transform">↗</span>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

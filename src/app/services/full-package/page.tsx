@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Full Package — Limitless",
+  title: "Full Package — Limitlessly",
   description: "The complete online presence — website and store, under one roof. Best value for serious businesses.",
 };
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight, Zap, LayoutDashboard, Store, Linkedin, Sprout } from "lucide-react";
 
 export const metadata = {
-  title: "Portfolio — Limitless",
+  title: "Portfolio — Limitlessly",
   description: "Real AI platforms and products we have engineered — SaaS, AI tools, and marketplaces. Live, in production, serving thousands.",
 };
 
@@ -263,13 +263,15 @@ export default function PortfolioPage() {
           <div className="relative">
             <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-4">Your platform could be next.</h2>
             <p className="text-neutral-400 text-lg max-w-md mx-auto mb-8">Bring us the vision — we&apos;ll engineer it from idea to scale.</p>
-            <Link
-              href="/contact"
+            <a
+              href="https://calendly.com/rayyanabrar76/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 bg-white text-neutral-900 font-semibold text-sm pl-6 pr-2.5 py-3 rounded-full hover:bg-neutral-200 transition-all"
             >
               Book a Call
               <span className="w-7 h-7 bg-neutral-900 rounded-full flex items-center justify-center text-white text-xs group-hover:rotate-45 transition-transform">↗</span>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

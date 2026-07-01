@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "About — Limitless",
+  title: "About — Limitlessly",
   description: "An AI product studio building full-scale SaaS platforms for ambitious founders worldwide.",
 };
 
@@ -25,7 +25,7 @@ export default function AboutPage() {
               <span className="bg-linear-to-r from-indigo-400 via-violet-400 to-fuchsia-400 bg-clip-text text-transparent">who gets it.</span>
             </h1>
             <p className="text-lg text-neutral-400 max-w-2xl leading-relaxed">
-              Limitless is an AI product studio. We partner with founders worldwide to design
+              Limitlessly is an AI product studio. We partner with founders worldwide to design
               and build full-scale AI SaaS platforms — from the first spark of an idea to a
               product ready to scale.
             </p>
@@ -36,7 +36,7 @@ export default function AboutPage() {
             <div className="flex flex-col gap-6">
               <h2 className="text-2xl font-bold text-white">The Story</h2>
               <p className="text-neutral-400 leading-relaxed">
-                Limitless started with a simple belief: the gap between a great idea and a
+                Limitlessly started with a simple belief: the gap between a great idea and a
                 shipped product has never been smaller — if you have the right team. AI changed
                 what a small, focused studio can build, and how fast.
               </p>
@@ -63,7 +63,7 @@ export default function AboutPage() {
 
           {/* Values */}
           <div className="mb-20">
-            <h2 className="text-2xl font-bold mb-8 text-white">Why Limitless</h2>
+            <h2 className="text-2xl font-bold mb-8 text-white">Why Limitlessly</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 {
@@ -97,7 +97,9 @@ export default function AboutPage() {
             </h2>
             <p className="text-neutral-400 mb-8">Let&apos;s turn your vision into a platform.</p>
             <a
-              href="/#contact"
+              href="https://calendly.com/rayyanabrar76/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white text-neutral-900 font-medium px-8 py-3 rounded-full hover:bg-neutral-100 transition-all duration-200"
             >
               Book a Call

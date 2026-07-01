@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Agrolync — AI AgriTech Platform | Limitless",
+  title: "Agrolync — AI AgriTech Platform | Limitlessly",
   description:
     "Case study: an AI-powered farm-to-market platform connecting 12,400+ farmers to buyers across 36 Nigerian states, with AI price forecasting and a local-language assistant.",
 };
@@ -296,13 +296,15 @@ export default function AgrolyncCaseStudy() {
               We design and engineer AI platforms from idea to scale. Let&apos;s talk about yours.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3">
-              <Link
-                href="/contact"
+              <a
+                href="https://calendly.com/rayyanabrar76/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group flex items-center gap-3 bg-white text-neutral-900 font-semibold text-sm pl-6 pr-2.5 py-3 rounded-full hover:bg-neutral-200 transition-all"
               >
                 Book a Call
                 <span className="w-7 h-7 bg-neutral-900 rounded-full flex items-center justify-center text-white text-xs group-hover:rotate-45 transition-transform">↗</span>
-              </Link>
+              </a>
               <Link
                 href="/portfolio"
                 className="inline-flex items-center gap-2 border border-white/15 text-white font-semibold text-sm px-6 py-3 rounded-full hover:border-white/30 hover:bg-white/5 transition-all"

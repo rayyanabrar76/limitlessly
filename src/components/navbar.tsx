@@ -183,13 +183,15 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-2 shrink-0">
-            <Link
-              href="/contact"
+            <a
+              href="https://calendly.com/rayyanabrar76/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex items-center gap-2 bg-white text-neutral-900 text-sm font-semibold pl-5 pr-2 py-2 rounded-full hover:bg-neutral-200 transition-all duration-200"
             >
               Book a Call
               <span className="w-5 h-5 bg-neutral-900 rounded-full flex items-center justify-center text-white text-[10px] leading-none group-hover:rotate-45 transition-transform duration-200">↗</span>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Toggle */}
@@ -215,13 +217,15 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="pt-3 border-t border-white/10 mt-1">
-              <Link
-                href="/contact"
+              <a
+                href="https://calendly.com/rayyanabrar76/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-white text-neutral-900 text-sm font-semibold px-5 py-3 rounded-full hover:bg-neutral-200 transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
                 Book a Call <span>↗</span>
-              </Link>
+              </a>
             </div>
           </div>
         )}

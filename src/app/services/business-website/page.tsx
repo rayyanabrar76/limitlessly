@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Business Website — Limitless",
+  title: "Business Website — Limitlessly",
   description: "Your brand online, built to convert visitors into customers. Professional, fast, and SEO-ready.",
 };
 

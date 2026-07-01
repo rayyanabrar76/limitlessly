@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "E-Commerce Projects — Limitless",
+  title: "E-Commerce Projects — Limitlessly",
   description: "Explore our e-commerce builds — from industrial platforms to multi-tenant SaaS and no-code admin panels.",
 };
 

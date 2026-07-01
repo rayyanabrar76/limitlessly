@@ -130,10 +130,12 @@ export default function Hero() {
           <div className="relative">
             <div className="absolute -inset-0.75 rounded-full bg-linear-to-r from-indigo-500 via-violet-500 to-fuchsia-500 blur-md opacity-60 animate-glow-pulse" />
             <a
-              href="/contact"
+              href="https://calendly.com/rayyanabrar76/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="relative group flex items-center gap-3 bg-white text-neutral-900 font-semibold text-sm pl-6 pr-2.5 py-3 rounded-full hover:bg-neutral-200 transition-all duration-200"
             >
-              Book a Call
+              Book a 20-min Strategy Call
               <span className="w-7 h-7 bg-neutral-900 rounded-full flex items-center justify-center text-white text-xs shrink-0 group-hover:rotate-45 transition-transform duration-200">↗</span>
             </a>
           </div>

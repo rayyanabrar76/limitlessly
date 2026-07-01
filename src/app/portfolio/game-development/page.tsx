@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Game Development — Limitless",
+  title: "Game Development — Limitlessly",
   description: "Explore our game development portfolio — from atmospheric co-op horror on Steam to mobile racing games and indie RPGs.",
 };
 

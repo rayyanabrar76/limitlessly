@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Business Websites — Limitless",
+  title: "Business Websites — Limitlessly",
   description: "Explore our business website projects — from multilingual restaurant sites to bold agency builds and agritech marketplaces.",
 };
 

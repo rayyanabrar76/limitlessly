@@ -270,7 +270,7 @@ export default function LiveMockup() {
                       <p className="text-[11px] font-semibold text-neutral-700 mb-2">Recent Activity</p>
                       <div className="space-y-1">
                         {[
-                          { dot: "bg-green-400",  b: "Project created",   rest: ' "Limitless Website"',      time: "2m" },
+                          { dot: "bg-green-400",  b: "Project created",   rest: ' "Limitlessly Website"',      time: "2m" },
                           { dot: "bg-blue-400",   b: "Client approved",   rest: " design proposal",          time: "1h" },
                           { dot: "bg-violet-400", b: "Payment received",  rest: " $2,400 from Acme Corp.",   time: "3h" },
                         ].map((a, i) => (
@@ -297,7 +297,9 @@ export default function LiveMockup() {
               Want to see your idea like this? <span className="font-semibold text-white">We&apos;ll build you a live prototype.</span>
             </p>
             <a
-              href="#contact"
+              href="https://calendly.com/rayyanabrar76/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-white text-neutral-900 font-semibold text-sm pl-6 pr-2.5 py-2.5 rounded-full hover:bg-neutral-200 transition-all duration-200"
             >
               Book a Call

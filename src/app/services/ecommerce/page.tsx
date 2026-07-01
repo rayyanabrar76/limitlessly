@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "E-Commerce Store — Limitless",
+  title: "E-Commerce Store — Limitlessly",
   description: "Custom online stores built to sell — not just look good. Full Stripe payments, admin dashboard, order management, and more.",
 };
 

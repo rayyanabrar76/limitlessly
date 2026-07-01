@@ -3,7 +3,7 @@ import { ImageResponse } from 'next/og'
 export const runtime = 'edge'
 
 // Image metadata
-export const alt = 'Limitless - Build Without Limits'
+export const alt = 'Limitlessly - Build Without Limits'
 export const size = {
   width: 1200,
   height: 630,
@@ -46,7 +46,7 @@ export default async function Image() {
               marginBottom: '10px',
             }}
           >
-            Limitless
+            Limitlessly
           </h1>
           <p
             style={{

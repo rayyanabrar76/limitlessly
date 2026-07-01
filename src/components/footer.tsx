@@ -28,7 +28,9 @@ export default function Footer() {
 
           <div className="flex flex-col gap-4 shrink-0">
             <a
-              href="/contact"
+              href="https://calendly.com/rayyanabrar76/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-3 bg-white text-neutral-900 font-semibold text-sm pl-7 pr-3 py-3.5 rounded-full hover:bg-neutral-100 transition-all duration-200 w-fit"
             >
               Book a Call

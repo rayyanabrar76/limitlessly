@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const { data } = matter(fileContent);
 
   return {
-    title: `${data.title} | Limitless Blog`,
+    title: `${data.title} | Limitlessly Blog`,
     description: data.description,
   };
 }
@@ -60,7 +60,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
           <div className="flex items-center gap-4 text-neutral-400 text-sm">
             <span>{data.date}</span>
             <span className="w-1 h-1 bg-neutral-300 rounded-full"></span>
-            <span>By Limitless Team</span>
+            <span>By Limitlessly Team</span>
           </div>
           <div className="mt-8 border-t border-neutral-200"></div>
         </header>

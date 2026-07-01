@@ -1,7 +1,7 @@
 import { GiGamepad, GiGears, GiPaintBucket, GiMultipleTargets, GiMagnifyingGlass, GiRocketFlight, GiMoneyStack, GiWrench } from "react-icons/gi";
 
 export const metadata = {
-  title: "Game Development — Limitless",
+  title: "Game Development — Limitlessly",
   description: "Indie PC game development for Steam. Co-op, horror, survival, RPG — built from concept to launch using Unity and Unreal Engine.",
 };
 

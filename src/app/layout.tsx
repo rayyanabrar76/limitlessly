@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Limitless — AI Product Studio",
+  title: "Limitlessly — AI Product Studio",
   description: "We design and build full-scale AI SaaS platforms — from idea to launch to scale. A product studio for ambitious founders worldwide.",
   verification: {
     google: "Uk3At5gc6OYWMn1zmULpfwsM7qycNYAYt_HFoC2_tFw",
