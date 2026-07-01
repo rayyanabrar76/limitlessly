@@ -4,6 +4,7 @@ import LiveMockup from "@/components/live-mockup";
 import Services from "@/components/services";
 import Portfolio from "@/components/portfolio";
 import Process from "@/components/process";
+import LeadMagnet from "@/components/lead-magnet";
 import Contact from "@/components/contact";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Services />
       <Portfolio />
       <Process />
+      <LeadMagnet />
       <Contact />
     </main>
   );
