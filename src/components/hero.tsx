@@ -147,6 +147,17 @@ export default function Hero() {
           </a>
         </div>
 
+        {/* Lead magnet link */}
+        <a
+          href="#checklist"
+          className="group inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors mb-16 -mt-8 animate-rise"
+          style={{ animationDelay: "0.34s" }}
+        >
+          Not ready to talk? Get the free
+          <span className="text-white font-medium underline underline-offset-4 decoration-white/30 group-hover:decoration-white">AI SaaS Feasibility Checklist</span>
+          <span className="group-hover:translate-x-0.5 transition-transform">→</span>
+        </a>
+
         {/* Tech trust row */}
         <div className="animate-rise" style={{ animationDelay: "0.4s" }}>
           <p className="text-[11px] uppercase tracking-[0.22em] text-neutral-600 mb-6">

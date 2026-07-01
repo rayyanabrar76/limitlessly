@@ -258,7 +258,7 @@ export default function PortfolioPage() {
 
       {/* ── CTA ── */}
       <section className="px-6 py-24 border-t border-white/10">
-        <div className="max-w-5xl mx-auto rounded-3xl border border-white/10 bg-linear-to-br from-white/[0.06] to-transparent p-10 md:p-14 text-center relative overflow-hidden">
+        <div className="max-w-5xl mx-auto rounded-3xl border border-white/10 bg-linear-to-br from-white/6 to-transparent p-10 md:p-14 text-center relative overflow-hidden">
           <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-110 h-110 rounded-full bg-indigo-600/20 blur-[120px] pointer-events-none" />
           <div className="relative">
             <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-4">Your platform could be next.</h2>

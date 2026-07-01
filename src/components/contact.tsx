@@ -123,7 +123,7 @@ export default function Contact() {
               </button>
             </div>
           ) : (
-            <div className="relative rounded-3xl p-px bg-linear-to-b from-white/20 via-white/[0.06] to-transparent">
+            <div className="relative rounded-3xl p-px bg-linear-to-b from-white/20 via-white/6 to-transparent">
               <form onSubmit={handleSubmit} className="rounded-3xl bg-neutral-900/80 backdrop-blur-xl p-8 md:p-9 flex flex-col gap-5">
                 <div>
                   <p className="text-lg font-bold text-white">Tell us what you&apos;re building</p>

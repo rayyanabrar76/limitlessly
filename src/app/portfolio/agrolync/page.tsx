@@ -198,7 +198,7 @@ export default function AgrolyncCaseStudy() {
             {capabilities.map((c) => (
               <div
                 key={c.title}
-                className="relative rounded-3xl border border-white/10 bg-white/[0.03] p-8 overflow-hidden"
+                className="relative rounded-3xl border border-white/10 bg-white/3 p-8 overflow-hidden"
               >
                 {c.highlight && (
                   <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full blur-[80px] pointer-events-none" style={{ background: `${ACCENT}22` }} />
@@ -228,7 +228,7 @@ export default function AgrolyncCaseStudy() {
 
       {/* ── Build details ── */}
       <section className="px-6 mb-28">
-        <div className="max-w-5xl mx-auto rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-10">
+        <div className="max-w-5xl mx-auto rounded-3xl border border-white/10 bg-white/3 p-8 md:p-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <p className="text-[11px] uppercase tracking-[0.2em] mb-4" style={{ color: ACCENT }}>The Stack</p>
@@ -286,7 +286,7 @@ export default function AgrolyncCaseStudy() {
 
       {/* ── Next + CTA ── */}
       <section className="px-6 pb-28">
-        <div className="max-w-5xl mx-auto rounded-3xl border border-white/10 bg-linear-to-br from-white/[0.06] to-transparent p-10 md:p-14 text-center relative overflow-hidden">
+        <div className="max-w-5xl mx-auto rounded-3xl border border-white/10 bg-linear-to-br from-white/6 to-transparent p-10 md:p-14 text-center relative overflow-hidden">
           <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-110 h-110 rounded-full blur-[120px] pointer-events-none" style={{ background: `${ACCENT}22` }} />
           <div className="relative">
             <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight mb-4">
