@@ -1,25 +1,17 @@
-import Hero from "@/components/hero";
+import StoreHero from "@/components/store-hero";
+import CategoryStrip from "@/components/category-strip";
+import FeaturedProducts from "@/components/featured-products";
+import HomeFaq from "@/components/home-faq";
 import MarqueeStrip from "@/components/marquee-strip";
-import LiveMockup from "@/components/live-mockup";
-import Services from "@/components/services";
-import Portfolio from "@/components/portfolio";
-import Proof from "@/components/proof";
-import Process from "@/components/process";
-import LeadMagnet from "@/components/lead-magnet";
-import Contact from "@/components/contact";
 
 export default function Home() {
   return (
-    <main>
-      <Hero />
+    <main className="relative">
+      <StoreHero />
+      <CategoryStrip />
+      <FeaturedProducts />
+      <HomeFaq />
       <MarqueeStrip />
-      <LiveMockup />
-      <Services />
-      <Portfolio />
-      <Proof />
-      <Process />
-      <LeadMagnet />
-      <Contact />
     </main>
   );
 }

@@ -48,10 +48,10 @@ export default function ContactPage() {
   }
 
   const inputBase =
-    "w-full bg-white/5 border border-white/10 rounded-xl pl-11 pr-4 py-3.5 text-white placeholder-white/25 focus:outline-none focus:border-indigo-400/60 focus:bg-white/[0.07] focus:ring-4 focus:ring-indigo-500/10 transition-all text-sm";
+    "w-full bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 rounded-xl pl-11 pr-4 py-3.5 text-neutral-900 dark:text-white placeholder-neutral-400 dark:placeholder-white/25 focus:outline-none focus:border-indigo-500/60 dark:focus:border-indigo-400/60 focus:bg-white dark:focus:bg-white/[0.07] focus:ring-4 focus:ring-indigo-500/10 transition-all text-sm";
 
   return (
-    <main className="bg-neutral-950 min-h-screen text-neutral-100 overflow-hidden">
+    <main className="bg-neutral-50 dark:bg-neutral-950 min-h-screen text-neutral-900 dark:text-neutral-100 overflow-hidden transition-colors duration-300">
       <section className="relative pt-40 pb-24 px-6">
         {/* Ambient glows */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-225 h-100 z-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at top, rgba(99,102,241,0.18), transparent 70%)" }} />
@@ -59,21 +59,21 @@ export default function ContactPage() {
         <div className="relative max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/5 backdrop-blur px-4 py-1.5 mb-7">
+            <div className="inline-flex items-center gap-2.5 rounded-full border border-neutral-200 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur px-4 py-1.5 mb-7 shadow-sm dark:shadow-none transition-colors">
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 dark:bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500 dark:bg-emerald-400" />
               </span>
-              <span className="text-xs font-medium text-neutral-300">Available for new founders</span>
+              <span className="text-xs font-medium text-neutral-600 dark:text-neutral-300">Available for new founders</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-[0.95] mb-5">
+            <h1 className="text-5xl md:text-7xl font-black text-neutral-900 dark:text-white tracking-tighter leading-[0.95] mb-5">
               Let&apos;s build{" "}
-              <span className="bg-linear-to-r from-indigo-400 via-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-indigo-500 via-violet-500 to-fuchsia-500 dark:from-indigo-400 dark:via-violet-400 dark:to-fuchsia-400 bg-clip-text text-transparent">
                 your platform
               </span>
               .
             </h1>
-            <p className="text-neutral-400 max-w-xl mx-auto text-lg leading-relaxed">
+            <p className="text-neutral-600 dark:text-neutral-400 max-w-xl mx-auto text-lg leading-relaxed">
               Book a call or send a message — either way, we&apos;ll get back to you within 24 hours.
             </p>
           </div>
@@ -87,17 +87,17 @@ export default function ContactPage() {
                 href={CALENDLY}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative rounded-3xl p-px bg-linear-to-b from-indigo-500/40 to-transparent block"
+                className="group relative rounded-3xl p-px bg-linear-to-b from-indigo-200 to-transparent dark:from-indigo-500/40 dark:to-transparent block"
               >
-                <div className="rounded-3xl bg-neutral-900 p-6 flex items-center gap-4 hover:bg-neutral-900/70 transition-colors">
-                  <div className="w-12 h-12 rounded-xl bg-indigo-500/15 border border-indigo-500/30 flex items-center justify-center shrink-0">
-                    <CalendarClock size={22} className="text-indigo-400" />
+                <div className="rounded-3xl bg-white dark:bg-neutral-900 p-6 flex items-center gap-4 hover:bg-neutral-50 dark:hover:bg-neutral-900/70 transition-colors shadow-xl shadow-black/5 dark:shadow-none">
+                  <div className="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-500/15 border border-indigo-100 dark:border-indigo-500/30 flex items-center justify-center shrink-0">
+                    <CalendarClock size={22} className="text-indigo-500 dark:text-indigo-400" />
                   </div>
                   <div className="flex-1">
-                    <p className="text-white font-bold">Book a 20-min strategy call</p>
-                    <p className="text-sm text-neutral-400 mt-0.5">Free, no pitch — we&apos;ll pressure-test your idea.</p>
+                    <p className="text-neutral-900 dark:text-white font-bold">Book a 20-min strategy call</p>
+                    <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-0.5">Free, no pitch — we&apos;ll pressure-test your idea.</p>
                   </div>
-                  <span className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-white shrink-0 group-hover:bg-white group-hover:text-neutral-900 group-hover:border-white transition-all">
+                  <span className="w-9 h-9 rounded-full border border-neutral-200 dark:border-white/15 flex items-center justify-center text-neutral-900 dark:text-white shrink-0 group-hover:bg-neutral-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-neutral-900 dark:group-hover:border-white transition-all">
                     <ArrowUpRight size={16} />
                   </span>
                 </div>
@@ -105,16 +105,16 @@ export default function ContactPage() {
 
               {/* Steps */}
               <div>
-                <h2 className="text-lg font-bold mb-6 text-white">What happens next?</h2>
+                <h2 className="text-lg font-bold mb-6 text-neutral-900 dark:text-white">What happens next?</h2>
                 <div className="flex flex-col gap-6">
                   {steps.map((item) => (
                     <div key={item.title} className="flex gap-4">
-                      <div className="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center shrink-0">
-                        <item.Icon size={17} className="text-indigo-400" />
+                      <div className="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-100 dark:border-indigo-500/30 flex items-center justify-center shrink-0">
+                        <item.Icon size={17} className="text-indigo-500 dark:text-indigo-400" />
                       </div>
                       <div>
-                        <p className="font-semibold text-white text-sm">{item.title}</p>
-                        <p className="text-sm text-neutral-400 mt-1 leading-relaxed">{item.desc}</p>
+                        <p className="font-semibold text-neutral-900 dark:text-white text-sm">{item.title}</p>
+                        <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1 leading-relaxed">{item.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -122,12 +122,12 @@ export default function ContactPage() {
               </div>
 
               {/* Quick info */}
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col gap-1 divide-y divide-white/10">
+              <div className="bg-white/50 dark:bg-white/5 border border-neutral-200 dark:border-white/10 rounded-2xl p-6 flex flex-col gap-1 divide-y divide-neutral-200 dark:divide-white/10 shadow-sm dark:shadow-none transition-colors">
                 {quickInfo.map((q) => (
                   <div key={q.label} className="flex items-center gap-3 py-3 first:pt-0 last:pb-0">
-                    <q.Icon size={15} className="text-neutral-500" />
-                    <span className="text-neutral-400 text-sm">{q.label}</span>
-                    <span className="text-white text-sm ml-auto font-medium">{q.value}</span>
+                    <q.Icon size={15} className="text-neutral-400 dark:text-neutral-500" />
+                    <span className="text-neutral-500 dark:text-neutral-400 text-sm">{q.label}</span>
+                    <span className="text-neutral-900 dark:text-white text-sm ml-auto font-medium">{q.value}</span>
                   </div>
                 ))}
               </div>
@@ -135,47 +135,47 @@ export default function ContactPage() {
 
             {/* Right — form */}
             <div className="relative">
-              <div className="absolute -inset-6 bg-indigo-600/10 blur-3xl rounded-[2.5rem] pointer-events-none" />
+              <div className="absolute -inset-6 bg-indigo-500/5 dark:bg-indigo-600/10 blur-3xl rounded-[2.5rem] pointer-events-none" />
               {submitted ? (
-                <div className="relative flex flex-col items-center justify-center text-center py-28 border border-white/10 rounded-3xl bg-neutral-900/80 backdrop-blur-xl">
-                  <div className="w-16 h-16 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center mb-6">
-                    <Check size={28} className="text-emerald-400" />
+                <div className="relative flex flex-col items-center justify-center text-center py-28 border border-neutral-200 dark:border-white/10 rounded-3xl bg-white/80 dark:bg-neutral-900/80 backdrop-blur-xl shadow-xl shadow-black/5 dark:shadow-none transition-colors">
+                  <div className="w-16 h-16 rounded-2xl bg-emerald-50 dark:bg-emerald-500/15 border border-emerald-100 dark:border-emerald-500/30 flex items-center justify-center mb-6">
+                    <Check size={28} className="text-emerald-500 dark:text-emerald-400" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Message sent!</h3>
-                  <p className="text-neutral-400 text-sm mb-8">We&apos;ll be in touch within 24 hours.</p>
+                  <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-2">Message sent!</h3>
+                  <p className="text-neutral-500 dark:text-neutral-400 text-sm mb-8">We&apos;ll be in touch within 24 hours.</p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="text-neutral-400 hover:text-white transition-colors text-sm underline underline-offset-4"
+                    className="text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors text-sm underline underline-offset-4"
                   >
                     Send another message
                   </button>
                 </div>
               ) : (
-                <div className="relative rounded-3xl p-px bg-linear-to-b from-white/20 via-white/[0.06] to-transparent">
-                  <form onSubmit={handleSubmit} className="rounded-3xl bg-neutral-900/80 backdrop-blur-xl p-8 md:p-9 flex flex-col gap-5">
+                <div className="relative rounded-3xl p-px bg-linear-to-b from-neutral-200 via-neutral-100 to-transparent dark:from-white/20 dark:via-white/[0.06] dark:to-transparent">
+                  <form onSubmit={handleSubmit} className="rounded-3xl bg-white/90 dark:bg-neutral-900/80 backdrop-blur-xl p-8 md:p-9 flex flex-col gap-5 shadow-xl shadow-black/5 dark:shadow-none transition-colors">
                     <div>
-                      <p className="text-lg font-bold text-white">Send us a message</p>
+                      <p className="text-lg font-bold text-neutral-900 dark:text-white">Send us a message</p>
                       <p className="text-sm text-neutral-500 mt-1">Prefer to write? Tell us what you&apos;re building.</p>
                     </div>
 
                     <div className="flex flex-col gap-2">
-                      <label className="text-sm text-neutral-300 font-medium">Your Name</label>
+                      <label className="text-sm text-neutral-600 dark:text-neutral-300 font-medium">Your Name</label>
                       <div className="relative">
-                        <User size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-500 pointer-events-none" />
+                        <User size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400 dark:text-neutral-500 pointer-events-none" />
                         <input type="text" name="name" required value={form.name} onChange={handleChange} placeholder="John Doe" className={inputBase} />
                       </div>
                     </div>
 
                     <div className="flex flex-col gap-2">
-                      <label className="text-sm text-neutral-300 font-medium">Email Address</label>
+                      <label className="text-sm text-neutral-600 dark:text-neutral-300 font-medium">Email Address</label>
                       <div className="relative">
-                        <Mail size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-500 pointer-events-none" />
+                        <Mail size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400 dark:text-neutral-500 pointer-events-none" />
                         <input type="email" name="email" required value={form.email} onChange={handleChange} placeholder="you@company.com" className={inputBase} />
                       </div>
                     </div>
 
                     <div className="flex flex-col gap-2">
-                      <label className="text-sm text-neutral-300 font-medium">Tell us about your project</label>
+                      <label className="text-sm text-neutral-600 dark:text-neutral-300 font-medium">Tell us about your project</label>
                       <textarea
                         name="message"
                         required
@@ -183,19 +183,19 @@ export default function ContactPage() {
                         onChange={handleChange}
                         placeholder="What are you building? Share your idea, timeline, and goals..."
                         rows={5}
-                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-white/25 focus:outline-none focus:border-indigo-400/60 focus:bg-white/[0.07] focus:ring-4 focus:ring-indigo-500/10 transition-all resize-none text-sm"
+                        className="w-full bg-neutral-100 dark:bg-white/5 border border-neutral-200 dark:border-white/10 rounded-xl px-4 py-3.5 text-neutral-900 dark:text-white placeholder-neutral-400 dark:placeholder-white/25 focus:outline-none focus:border-indigo-500/60 dark:focus:border-indigo-400/60 focus:bg-white dark:focus:bg-white/[0.07] focus:ring-4 focus:ring-indigo-500/10 transition-all resize-none text-sm"
                       />
                     </div>
 
                     <button
                       type="submit"
                       disabled={loading}
-                      className="group flex items-center justify-center gap-2.5 bg-white text-neutral-900 font-semibold py-4 rounded-full hover:bg-neutral-200 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                      className="group flex items-center justify-center gap-2.5 bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 font-semibold py-4 rounded-full hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
                     >
                       {loading ? "Sending..." : (
                         <>
                           Send Message
-                          <span className="w-6 h-6 bg-neutral-900 rounded-full flex items-center justify-center text-white text-xs group-hover:translate-x-0.5 transition-transform">→</span>
+                          <span className="w-6 h-6 bg-white/20 dark:bg-neutral-900/10 rounded-full flex items-center justify-center text-white dark:text-neutral-900 text-xs group-hover:translate-x-0.5 transition-transform">→</span>
                         </>
                       )}
                     </button>

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { X } from "lucide-react";
 
 const TEXT =
-  "Now taking on new founders for 2026  ✦  Free product & architecture strategy call  ✦  Idea to AI platform — designed, built, scaled  ✦  No commitment needed  ✦  Book a call to get started  ✦  ";
+  "Welcome to the Software Store  ✦  Browse 20 ready-to-build software and AI products  ✦  Add to Quote for pricing  ✦  No commitment needed  ✦  We reply in 24 hours  ✦  ";
 
 export default function AnnouncementBar() {
   const [visible, setVisible] = useState(true);

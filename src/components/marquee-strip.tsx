@@ -15,15 +15,15 @@ export default function MarqueeStrip() {
   const doubled = [...items, ...items];
 
   return (
-    <div className="bg-neutral-950 border-t border-white/[0.06] overflow-hidden py-4 select-none">
+    <section className="py-12 bg-white dark:bg-neutral-950 border-t border-b border-neutral-200 dark:border-white/5 overflow-hidden transition-colors duration-300">
       <div className="flex animate-marquee whitespace-nowrap">
         {doubled.map((item, i) => (
-          <span key={i} className="inline-flex items-center gap-6 px-6">
-            <span className="text-white/35 text-sm font-medium tracking-wide">{item}</span>
-            <span className="text-white/15 text-xs">✦</span>
+          <span key={i} className="inline-flex items-center gap-6 px-6 text-neutral-400 dark:text-neutral-500">
+            <span className="text-sm font-medium tracking-wide">{item}</span>
+            <span className="text-neutral-300 dark:text-neutral-700 text-xs">✦</span>
           </span>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
