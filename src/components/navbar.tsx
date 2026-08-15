@@ -34,7 +34,14 @@ const megaServices = [
   },
 ];
 
-const navItems = [
+type NavItem = {
+  label: string;
+  href: string;
+  mega?: boolean;
+  dropdown?: { label: string; href: string; desc: string }[];
+};
+
+const navItems: NavItem[] = [
   { label: "About Us", href: "/about" },
   { label: "Store", href: "/store", mega: true },
   { label: "Contact", href: "/contact" },
