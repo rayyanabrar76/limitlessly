@@ -3,7 +3,7 @@ import { ImageResponse } from 'next/og'
 export const runtime = 'edge'
 
 // Image metadata
-export const alt = 'Limitlessly - Build Without Limits'
+export const alt = 'Limitlessly — The Software Store for Custom AI & Web Development'
 export const size = {
   width: 1200,
   height: 630,
@@ -54,7 +54,7 @@ export default async function Image() {
               color: 'rgba(255, 255, 255, 0.6)',
             }}
           >
-            Build Without Limits
+            The Software Store — Custom AI & Web Development
           </p>
         </div>
       </div>

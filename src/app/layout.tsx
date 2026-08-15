@@ -19,6 +19,42 @@ export const metadata: Metadata = {
     template: "%s | Limitlessly"
   },
   description: "Browse 20 ready-to-build software and AI products. Add what you need to a quote — no prices, no pressure, a reply in 24 hours.",
+  keywords: [
+    "custom software development",
+    "AI development agency",
+    "SaaS development",
+    "AI SaaS platform",
+    "custom AI agents",
+    "web application development",
+    "mobile app development",
+    "e-commerce development",
+    "Next.js development",
+    "software store",
+    "Limitlessly",
+  ],
+  authors: [{ name: "Limitlessly", url: "https://limitlessly.vercel.app" }],
+  creator: "Limitlessly",
+  publisher: "Limitlessly",
+  formatDetection: {
+    telephone: false,
+    email: false,
+    address: false,
+  },
+  alternates: {
+    canonical: "https://limitlessly.vercel.app",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  category: "technology",
   openGraph: {
     title: "Limitlessly — The Software Store",
     description: "Browse 20 ready-to-build software and AI products. Add what you need to a quote — no prices, no pressure, a reply in 24 hours.",

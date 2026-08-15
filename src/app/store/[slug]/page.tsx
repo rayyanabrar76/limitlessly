@@ -41,6 +41,9 @@ export async function generateMetadata({ params }: Props) {
       description: product.tagline,
       images: [img],
     },
+    alternates: {
+      canonical: `https://limitlessly.vercel.app/store/${slug}`,
+    },
   };
 }
 
@@ -61,29 +64,58 @@ export default async function ProductPage({ params }: Props) {
   const img = placeholderImages[product.slug] || "/images/products/saas_dashboard_light.jpg";
   const related = relatedProducts(product, 3);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: product.name,
-    operatingSystem: "Web",
-    applicationCategory: "BusinessApplication",
-    description: product.description,
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      description: "Custom Quote Required",
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      name: product.name,
+      operatingSystem: "Web",
+      applicationCategory: "BusinessApplication",
+      description: product.description,
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
+        description: "Custom Quote Required",
+      },
+      image: `https://limitlessly.vercel.app${img}`,
     },
-    image: `https://limitlessly.vercel.app${img}`,
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://limitlessly.vercel.app",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Store",
+          item: "https://limitlessly.vercel.app/store",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: product.name,
+          item: `https://limitlessly.vercel.app/store/${product.slug}`,
+        },
+      ],
+    }
+  ];
 
   return (
     <main className="pt-[100px] pb-24 min-h-screen bg-neutral-50 dark:bg-neutral-950 transition-colors duration-300">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      {jsonLd.map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Back Link */}
