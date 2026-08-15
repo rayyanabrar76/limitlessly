@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Limitlessly — The Software Store",
   description: "Browse 20 ready-to-build software and AI products. Add what you need to a quote — no prices, no pressure, a reply in 24 hours.",
   verification: {
-    google: "Uk3At5gc6OYWMn1zmULpfwsM7qycNYAYt_HFoC2_tFw",
+    google: "qq8BrUVLnAVbIdaN48osQMK24XU-mq2m-vJnr8U8vtM",
   },
 };
 
