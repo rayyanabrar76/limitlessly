@@ -48,7 +48,7 @@ export default function StoreHero() {
 
   // Auto-advance
   useEffect(() => {
-    const timer = setInterval(nextSlide, 6000);
+    const timer = setInterval(nextSlide, 1500);
     return () => clearInterval(timer);
   }, [nextSlide]);
 
@@ -62,7 +62,7 @@ export default function StoreHero() {
           return (
             <div
               key={slide.id}
-              className={`absolute inset-0 transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
+              className={`absolute inset-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                 isActive ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
               }`}
             >
@@ -100,7 +100,7 @@ export default function StoreHero() {
               {/* Content Box */}
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 max-w-6xl mx-auto pt-24 pb-12">
                 <div 
-                  className={`flex flex-col items-center transition-all duration-[1200ms] ease-[cubic-bezier(0.16,1,0.3,1)] delay-300 ${
+                  className={`flex flex-col items-center transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] delay-100 ${
                     isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
                   }`}
                 >
