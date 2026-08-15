@@ -4,10 +4,6 @@ import Link from "next/link";
 import { ArrowUpRight, Zap, LayoutDashboard, Store, Linkedin, Sprout, Blocks, Rocket, Globe, Code2, Bot, ShoppingBag, ChevronDown, Boxes, Star } from "lucide-react";
 import Image from "next/image";
 
-export const metadata = {
-  title: "About Limitlessly — The Product Studio",
-  description: "Limitlessly is an elite software agency building platforms that scale from day one. Trusted by 40+ visionary founders worldwide.",
-};
 
 const projects = [
   {

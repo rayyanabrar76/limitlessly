@@ -4,10 +4,6 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { CalendarClock, MessageSquare, Compass, Rocket, Check, User, Mail, ArrowUpRight, Clock, Repeat } from "lucide-react";
 
-export const metadata = {
-  title: "Contact Us — Let's Build Your Platform",
-  description: "Get in touch to discuss your next software project. Book a free 20-minute strategy call or send us a message. We reply within 24 hours.",
-};
 
 const CALENDLY = "https://calendly.com/rayyanabrar76/30min";
 

@@ -6,8 +6,16 @@ import MarqueeStrip from "@/components/marquee-strip";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Limitlessly — Custom Software & AI Development",
-  description: "Browse 20 ready-to-build software and AI products. Add what you need to a quote — no prices, no pressure, a reply in 24 hours.",
+  title: "Limitlessly — Custom Software & AI Development Store",
+  description: "Browse 20 ready-to-build software and AI products. From AI SaaS platforms to custom agents, e-commerce stores, and mobile apps. Add to quote — no prices, no pressure, a reply in 24 hours.",
+  alternates: {
+    canonical: "https://limitlessly.vercel.app",
+  },
+  openGraph: {
+    title: "Limitlessly — The Software Store",
+    description: "Browse 20 ready-to-build software and AI products. Add to quote, get a proposal in 24 hours.",
+    url: "https://limitlessly.vercel.app",
+  },
 };
 
 const jsonLd = [

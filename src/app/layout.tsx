@@ -89,6 +89,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`} suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://api.emailjs.com" />
+        <link rel="dns-prefetch" href="https://calendly.com" />
+      </head>
       <body className="antialiased bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 transition-colors duration-300">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <QuoteProvider>
