@@ -8,6 +8,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, Trash2, CheckCircle2, ClipboardList } from "lucide-react";
 
+export const metadata = {
+  title: "Request a Custom Quote",
+  description: "Submit your requirements and requested software products. We'll get back to you with a custom proposal and pricing within 24 hours.",
+};
+
 const placeholderImages: Record<string, string> = {
   "ai-saas-platform": "/images/products/saas_dashboard_light.jpg",
   "custom-ai-agent": "/images/products/ai_agent_light.jpg",

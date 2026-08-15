@@ -25,9 +25,22 @@ export async function generateMetadata({ params }: Props) {
   
   if (!product) return { title: "Product Not Found" };
 
+  const img = placeholderImages[product.slug] || "/images/products/saas_dashboard_light.jpg";
+
   return {
-    title: `${product.name} — Limitlessly Store`,
-    description: product.tagline,
+    title: `${product.name} — Software Store`,
+    description: product.description.substring(0, 160),
+    openGraph: {
+      title: product.name,
+      description: product.tagline,
+      images: [{ url: img, width: 1200, height: 630, alt: product.name }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: product.name,
+      description: product.tagline,
+      images: [img],
+    },
   };
 }
 
@@ -48,8 +61,29 @@ export default async function ProductPage({ params }: Props) {
   const img = placeholderImages[product.slug] || "/images/products/saas_dashboard_light.jpg";
   const related = relatedProducts(product, 3);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: product.name,
+    operatingSystem: "Web",
+    applicationCategory: "BusinessApplication",
+    description: product.description,
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      description: "Custom Quote Required",
+    },
+    image: `https://limitlessly.vercel.app${img}`,
+  };
+
   return (
     <main className="pt-[100px] pb-24 min-h-screen bg-neutral-50 dark:bg-neutral-950 transition-colors duration-300">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Back Link */}

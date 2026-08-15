@@ -1,9 +1,10 @@
 import { Suspense } from "react";
 import Catalog from "@/components/store/catalog";
+import { Metadata } from "next";
 
-export const metadata = {
-  title: "Browse the Store — Limitlessly",
-  description: "Browse 20 ready-to-build software and AI products. Add what you need to a quote.",
+export const metadata: Metadata = {
+  title: "Software & AI Product Catalog",
+  description: "Browse 20 ready-to-build software products and AI solutions. Choose your category, view details, and request a custom quote.",
 };
 
 export default function StorePage() {

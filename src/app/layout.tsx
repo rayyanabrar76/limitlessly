@@ -13,8 +13,34 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Limitlessly — The Software Store",
+  metadataBase: new URL("https://limitlessly.vercel.app"),
+  title: {
+    default: "Limitlessly — The Software Store",
+    template: "%s | Limitlessly"
+  },
   description: "Browse 20 ready-to-build software and AI products. Add what you need to a quote — no prices, no pressure, a reply in 24 hours.",
+  openGraph: {
+    title: "Limitlessly — The Software Store",
+    description: "Browse 20 ready-to-build software and AI products. Add what you need to a quote — no prices, no pressure, a reply in 24 hours.",
+    url: "https://limitlessly.vercel.app",
+    siteName: "Limitlessly",
+    images: [
+      {
+        url: "/images/products/saas_dashboard_light.jpg", // Fallback OG image
+        width: 1200,
+        height: 630,
+        alt: "Limitlessly Software Store",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Limitlessly — The Software Store",
+    description: "Browse 20 ready-to-build software and AI products. Add what you need to a quote.",
+    images: ["/images/products/saas_dashboard_light.jpg"],
+  },
   verification: {
     google: "qq8BrUVLnAVbIdaN48osQMK24XU-mq2m-vJnr8U8vtM",
   },
