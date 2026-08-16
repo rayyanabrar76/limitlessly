@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { blogPosts, getBlogPost, getRecentPosts } from "@/lib/blog";
+import Breadcrumbs from "@/components/breadcrumbs";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -99,14 +100,11 @@ export default async function BlogPostPage({ params }: Props) {
         />
       ))}
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Back */}
-        <Link
-          href="/blog"
-          className="inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white mb-10 transition-colors"
-        >
-          <ArrowLeft size={16} />
-          Back to Blog
-        </Link>
+        {/* Breadcrumb Navigation */}
+        <Breadcrumbs items={[
+          { label: "Blog", href: "/blog" },
+          { label: post.title },
+        ]} />
 
         {/* Meta */}
         <div className="flex items-center gap-3 mb-6">

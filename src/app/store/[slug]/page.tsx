@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { products, getProduct, relatedProducts } from "@/lib/products";
 import AddToQuoteAction from "./add-to-quote-action";
+import Breadcrumbs from "@/components/breadcrumbs";
 
 // Fallback images map
 const placeholderImages: Record<string, string> = {
@@ -117,15 +118,11 @@ export default async function ProductPage({ params }: Props) {
         />
       ))}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Back Link */}
-        <Link 
-          href="/store" 
-          className="inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white mb-8 transition-colors"
-        >
-          <ArrowLeft size={16} />
-          Back to Store
-        </Link>
+        {/* Breadcrumb Navigation */}
+        <Breadcrumbs items={[
+          { label: "Store", href: "/store" },
+          { label: product.name },
+        ]} />
 
         {/* Two-Column Layout */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">

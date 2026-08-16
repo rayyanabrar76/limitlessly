@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { blogPosts } from "@/lib/blog";
 import { ArrowUpRight } from "lucide-react";
+import Breadcrumbs from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Blog — Software Engineering & AI Insights",
@@ -42,6 +43,7 @@ export default function BlogPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <Breadcrumbs items={[{ label: "Blog" }]} />
         {/* Header */}
         <div className="mb-16">
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-indigo-500 dark:text-indigo-400 mb-4">

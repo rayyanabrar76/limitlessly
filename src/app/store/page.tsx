@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import Catalog from "@/components/store/catalog";
 import { Metadata } from "next";
 import { products } from "@/lib/products";
+import Breadcrumbs from "@/components/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Software & AI Product Catalog — Browse 20+ Solutions",
@@ -42,6 +43,8 @@ export default function StorePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <Breadcrumbs items={[{ label: "Store" }]} />
         
         {/* Header */}
         <div className="mb-12">
