@@ -57,7 +57,7 @@ export default function Footer() {
           </Link>
 
           <div className="flex items-center gap-8">
-            {[["Store", "/store"], ["About", "/about"], ["Contact", "/contact"]].map(([label, href]) => (
+            {[["Store", "/store"], ["About", "/about"], ["Contact", "/contact"], ["Blog", "/blog"], ["Privacy", "/privacy"], ["Terms", "/terms"]].map(([label, href]) => (
               <Link key={label} href={href} className="text-sm text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors">
                 {label}
               </Link>

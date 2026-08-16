@@ -45,6 +45,7 @@ const navItems: NavItem[] = [
   { label: "About Us", href: "/about" },
   { label: "Store", href: "/store", mega: true },
   { label: "Contact", href: "/contact" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export default function Navbar() {
